@@ -7,15 +7,16 @@ LIBFT       = $(LIBFT_DIR)/libft.a
 SRC_DIR     = src
 OBJ_DIR     = obj
 INC_DIR     = includes
-MKDIR       = mkdir -p   # Définir la commande mkdir pour créer des répertoires
+MKDIR       = mkdir -p
 
-SRCS        = $(SRC_DIR)/main.c
+# Recherche des fichiers sources automatiquement dans SRC_DIR
+VPATH       = $(SRC_DIR)
 
-# Fichiers objets (crée les noms des fichiers .o correspondants)
-OBJS        = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+# Définition des fichiers sources (sans besoin de préfixer par SRC_DIR)
+SRCS        = main.c parsing.c piles.c
 
-# Nom de l'exécutable
-NAME        = pushwap
+# Fichiers objets
+OBJS        = $(SRCS:%.c=$(OBJ_DIR)/%.o)
 
 # Règle par défaut
 all: $(NAME)
@@ -25,7 +26,7 @@ $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT)
 
 # Compilation des fichiers .c en .o
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Création du dossier obj s'il n'existe pas

@@ -22,7 +22,7 @@ GNL_SRC = get_next_line_bonus.c
 
 # Gestion de printf
 PRINTF_DIR = printf
-PRINTF_SRC = base.c hexa.c libft.c 
+PRINTF_SRC = base.c hexa.c libft.c
 
 # Création des fichiers objets
 OBJ     = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o)) \
@@ -46,21 +46,19 @@ $(NAME): $(OBJ)
 	@echo -e "$(GREEN)Static library created: $(NAME)$(NC)"
 
 %.o: %.c $(HEADER)
-	@printf "$(YELLOW)Generating libft object... %-38.38s \r$(NC)" $@
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Création de la bibliothèque dynamique
 so: $(OBJ)
 	@echo "Creating dynamic library libft.so..."
-	$(CC) -nostartfiles -shared -o libft.so $(OBJ)
+	@$(CC) -nostartfiles -shared -o libft.so $(OBJ)
 
 libft.so: so
 
+# Mode verbose : cache l'exécution des fichiers et affiche un message global
 verbose: $(NAME)
-	@echo "$(GREEN)Compiling directories:$(NC)"
-	@$(foreach dir, $(SRC_DIR) $(GNL_DIR) $(PRINTF_DIR), \
-		echo "$(YELLOW)Compiling directory: $(dir)$(NC)"; \
-		$(MAKE) --no-print-directory all -C $(dir);)
+	@echo "$(GREEN)🔹 Compilation silencieuse de Libft...$(NC)"
+	@$(MAKE) --no-print-directory all
 
 clean:
 	@echo "$(RED)Removing object files...$(NC)"
