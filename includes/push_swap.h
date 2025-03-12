@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/11 14:01:09 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/12 16:49:44 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ typedef struct s_stack
 
 }	t_stack;
 
-t_stack	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+
+
+t_stack *ft_pars(char **argv);
+t_stack	*ft_stacknew(int content);
+void	ft_stackadd_front(t_stack **lst, t_stack *new);
 
 
 #endif
