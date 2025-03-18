@@ -13,7 +13,7 @@ MKDIR       = mkdir -p
 VPATH       = $(SRC_DIR)
 
 # Définition des fichiers sources (sans besoin de préfixer par SRC_DIR)
-SRCS        = main.c parsing.c piles.c
+SRCS        = main.c parsing.c piles.c error.c
 
 # Fichiers objets
 OBJS        = $(SRCS:%.c=$(OBJ_DIR)/%.o)
