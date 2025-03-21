@@ -6,30 +6,40 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/18 18:31:42 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/21 15:44:10 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int str_list(t_stack *stack_a)
+int	str_list(t_stack **stack_a)
 {
-	size_t size;
-
-	size = 0
-}
-
-void print_list(t_stack **stack_a)
-{
-	t_stack *current;
+	size_t	size;
+	t_stack	*current;
 
 	current = *stack_a;
-	while(1)
+	size = 1;
+	while (1)
+	{
+		current = current->next;
+		if (current == *stack_a)
+			break ;
+		size++;
+	}
+	return (size);
+}
+
+void	print_list(t_stack **stack_a)
+{
+	t_stack	*current;
+
+	current = *stack_a;
+	while (1)
 	{
 		printf("nombre = |%ld|\n", current->content);
 		current = current->next;
-		if(current == *stack_a)
-			break;
+		if (current == *stack_a || !current)
+			break ;
 	}
 }
 
@@ -38,11 +48,11 @@ void	ft_creat_node(t_stack **stack_a, int n)
 	t_stack	*prev;
 	t_stack	*new;
 
-	if(!*stack_a)
+	if (!*stack_a || !stack_a)
 		return ;
 	prev = (*stack_a)->prev;
 	new = ft_malloc(sizeof(t_stack));
-	if(!new)
+	if (!new)
 		return ;
 	new->content = n;
 	new->next = *stack_a;
@@ -73,7 +83,7 @@ t_stack	*ft_stacknew(int content)
 {
 	t_stack	*new_stack;
 
-	new_stack =ft_malloc(sizeof(t_stack));
+	new_stack = ft_malloc(sizeof(t_stack));
 	if (!new_stack)
 		return (NULL);
 	new_stack->content = content;

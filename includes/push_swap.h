@@ -6,34 +6,40 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/18 16:33:22 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/21 16:21:30 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include <stdlib.h>
-#include "../libft/libft.h"
+# include "../libft/libft.h"
+# include <stdlib.h>
 
 typedef struct s_stack
 {
-	long content;
-	struct s_stack *next;
-	struct s_stack *prev;
+	long			content;
+	struct s_stack	*next;
+	struct s_stack	*prev;
 
-}	t_stack;
+}					t_stack;
 
-void	print_error(char *str);
-void	ft_check_error(char **argv);
-t_stack *ft_pars(char **argv);
-t_stack	*ft_stacknew(int content);
-void	ft_stackadd_front(t_stack **lst, t_stack *new);
+void				print_error(char *str);
+void				ft_check_error(char **argv);
+t_stack				*ft_pars(char **argv);
+t_stack				*ft_stacknew(int content);
+void				ft_stackadd_front(t_stack **lst, t_stack *new);
 
 // liste chainee;
 
-void	ft_create_head_node(t_stack **stack_a, int n);
-void	ft_creat_node(t_stack **stack_a, int n);
-void print_list(t_stack **stack_a);
+void				ft_create_head_node(t_stack **stack_a, int n);
+void				ft_creat_node(t_stack **stack_a, int n);
+void				print_list(t_stack **stack_a);
+int					str_list(t_stack **stack_a);
+
+// rotaion
+
+void sa(t_stack **stack_a);
+void sb(t_stack **stack_b);
 
 #endif
