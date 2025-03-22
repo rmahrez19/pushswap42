@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/21 16:21:30 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/22 16:10:50 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ int					str_list(t_stack **stack_a);
 
 void sa(t_stack **stack_a);
 void sb(t_stack **stack_b);
+void pb (t_stack **stack_a, t_stack **stack_b);
 
 #endif

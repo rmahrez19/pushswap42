@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/21 16:23:05 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/22 18:01:12 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,20 @@ void ss(t_stack **stack_a, t_stack **stack_b)
 	(*stack_b)->next->content = temp;
 	printf("ss");
 }
+
+void pb (t_stack **stack_a, t_stack **stack_b)
+{
+	int n;
+
+	if(!(*stack_a)->content)
+		return ;
+	n = (*stack_a)->next->content;
+	printf("n = %d\n", n);
+	if (!*stack_b)
+		ft_create_head_node(stack_b, n);
+	else
+		ft_creat_node(stack_b, n);
+		printf("pb");
+}
+
+void 
