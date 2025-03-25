@@ -36,6 +36,7 @@ void				ft_create_head_node(t_stack **stack_a, int n);
 void				ft_creat_node(t_stack **stack_a, int n);
 void				print_list(t_stack **stack_a);
 int					str_list(t_stack **stack_a);
+void ft_delone_first(t_stack **stack);
 
 // rotaion
 
@@ -43,4 +44,7 @@ void sa(t_stack **stack_a);
 void sb(t_stack **stack_b);
 void pb (t_stack **stack_a, t_stack **stack_b);
 
+// tri
+
+t_stack *small_tri(t_stack *stack_a, t_stack *stack_b, int size);
 #endif

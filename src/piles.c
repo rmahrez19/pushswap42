@@ -92,3 +92,26 @@ t_stack	*ft_stacknew(int content)
 	new_stack->next = NULL;
 	return (new_stack);
 }
+
+
+void ft_delone_first(t_stack **stack)
+{
+	t_stack *first;
+	t_stack *last;
+	
+	if(!stack || !(*stack))
+		return ;
+	first = *stack;
+	if (first->next == *stack)
+	{
+		// free(first);
+		*stack = NULL;
+		return ;
+	}
+	last = *stack;
+	while(last->next != *stack)
+		last = last->next;
+	*stack = first->next;
+	last->next = *stack;
+
+}

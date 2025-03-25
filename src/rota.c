@@ -19,7 +19,7 @@ void sa(t_stack **stack_a)
 	temp = (*stack_a)->content ;
 	(*stack_a)->content = (*stack_a)->next->content;
 	(*stack_a)->next->content = temp;
-	printf("sa");
+	ft_printf("sa");
 }
 
 void sb(t_stack **stack_b)
@@ -29,7 +29,7 @@ void sb(t_stack **stack_b)
 	temp = (*stack_b)->content ;
 	(*stack_b)->content = (*stack_b)->next->content;
 	(*stack_b)->next->content = temp;
-	printf("sb");
+	ft_printf("sb");
 }
 
 void ss(t_stack **stack_a, t_stack **stack_b)
@@ -42,7 +42,7 @@ void ss(t_stack **stack_a, t_stack **stack_b)
 	temp = (*stack_b)->content ;
 	(*stack_b)->content = (*stack_b)->next->content;
 	(*stack_b)->next->content = temp;
-	printf("ss");
+	ft_printf("ss");
 }
 
 void pb (t_stack **stack_a, t_stack **stack_b)
@@ -51,13 +51,26 @@ void pb (t_stack **stack_a, t_stack **stack_b)
 
 	if(!(*stack_a)->content)
 		return ;
-	n = (*stack_a)->next->content;
-	printf("n = %d\n", n);
+	n = (*stack_a)->content;
 	if (!*stack_b)
 		ft_create_head_node(stack_b, n);
 	else
 		ft_creat_node(stack_b, n);
-		printf("pb");
+	ft_printf("pb");
+	ft_delone_first(stack_a);
 }
 
-void 
+void pa (t_stack **stack_a, t_stack **stack_b)
+{
+	int n;
+
+	if(!(*stack_b)->content)
+		return ;
+	n = (*stack_a)->content;
+	if(!*stack_a)
+		ft_create_head_node(stack_a, n);
+	else
+		ft_creat_node(stack_a, n);
+	ft_printf("pa");
+	ft_delone_first(stack_b);
+}

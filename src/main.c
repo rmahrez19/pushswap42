@@ -38,12 +38,9 @@ int	main(int ac, char **av)
 		exit(0);
 	}
 	stack_a = ft_pars(av);
-	print_every_list(stack_a, stack_b);
-	printf("apres rotation \n");
 	size = str_list(&stack_a);
 	if(size <= 1)
 		exit(0);
-	pb(&stack_a, &stack_b);
-	print_every_list(stack_a, stack_b);
+	small_tri(stack_a, stack_b, size);	
 	ft_free();
 }
