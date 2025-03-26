@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/22 16:10:50 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:28:21 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,17 @@ void				ft_create_head_node(t_stack **stack_a, int n);
 void				ft_creat_node(t_stack **stack_a, int n);
 void				print_list(t_stack **stack_a);
 int					str_list(t_stack **stack_a);
-void ft_delone_first(t_stack **stack);
+void				ft_delone_first(t_stack **stack);
 
 // rotaion
 
-void sa(t_stack **stack_a);
-void sb(t_stack **stack_b);
-void pb (t_stack **stack_a, t_stack **stack_b);
+void				sa(t_stack **stack_a);
+void				sb(t_stack **stack_b);
+void				pb(t_stack **stack_a, t_stack **stack_b);
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
 
 // tri
 
-t_stack *small_tri(t_stack *stack_a, t_stack *stack_b, int size);
+void			small_tri(t_stack **stack_a, t_stack *stack_b);
 #endif

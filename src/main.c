@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/22 18:00:06 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:32:51 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	main(int ac, char **av)
 	size = str_list(&stack_a);
 	if(size <= 1)
 		exit(0);
-	small_tri(stack_a, stack_b, size);	
+	small_tri(&stack_a, stack_b);
+	print_list(&stack_a);
 	ft_free();
 }
