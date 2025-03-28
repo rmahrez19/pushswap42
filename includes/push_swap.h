@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/26 16:28:21 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/28 16:27:46 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ void				rb(t_stack **stack_b);
 
 // tri
 
-void			small_tri(t_stack **stack_a, t_stack *stack_b);
+void choice_tri(t_stack **stack_a, t_stack *stack_b, int size);
+
 #endif
