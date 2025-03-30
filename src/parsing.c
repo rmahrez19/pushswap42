@@ -14,7 +14,7 @@
 
 void	ft_attribute(int n, t_stack **stack)
 {
-	if (!(n >= -2147483648 && n <= 2147483647))
+	if (!(n >= INT_MIN && n <= INT_MAX))
 		print_error("NUMBER TOO BIG OR TOO SMALL");
 	if (!*stack)
 		ft_create_head_node(stack, n);

@@ -92,3 +92,21 @@ void	rb(t_stack **stack_b)
 
 	ft_printf("rb\n");
 }
+
+void rra(t_stack **stack_a)
+{
+	if (!stack_a || !(*stack_a) || (*stack_a)->next == *stack_a)
+		return ;
+	*stack_a = (*stack_a)->prev;
+
+	ft_printf("ra\n");
+}
+
+void rrb(t_stack **stack_b)
+{
+		if (!stack_b || !(*stack_b) || (*stack_b)->next == *stack_b)
+		return ;
+	*stack_b = (*stack_b)->prev;
+
+	ft_printf("rb\n");
+}

@@ -87,7 +87,7 @@ void	ft_check_value(char **argv)
 				count++;
 			else
 			{
-				if (count > 11)
+				if (count >= 19)
 					print_error("NUMBER TOO BIG OR TOO SMALL");
 				else
 					count = 0;
@@ -97,7 +97,7 @@ void	ft_check_value(char **argv)
 		i = 0;
 		j++;
 	}
-	if (count > 11)
+	if (count > 12)
 		print_error("number too big or too small");
 }
 

@@ -15,6 +15,7 @@
 
 # include "../libft/libft.h"
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_stack
 {
@@ -45,6 +46,8 @@ void				sb(t_stack **stack_b);
 void				pb(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
 
 // tri
 

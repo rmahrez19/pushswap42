@@ -11,7 +11,7 @@ void tri_2(t_stack **stack_a)
 		sa(stack_a);
 }
 
-void	small_tri(t_stack **stack_a)
+void	tri_3(t_stack **stack_a)
 {
 	int	num_1;
 	int	num_2;
@@ -41,12 +41,20 @@ void	small_tri(t_stack **stack_a)
 	}
 }
 
+void tri_5(t_stack **stack_a, t_stack **stack_b)
+{
+	int temp;
+
+	temp 
+}
+
 void choice_tri(t_stack **stack_a, t_stack *stack_b, int size)
 {
 	(void)stack_b;
 	if (size == 2)
 		tri_2(stack_a);
 	if(size == 3)
-		small_tri(stack_a);
+		tri_3(stack_a);
 	else
+	{}
 }
