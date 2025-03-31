@@ -41,12 +41,12 @@ void	tri_3(t_stack **stack_a)
 	}
 }
 
-void tri_5(t_stack **stack_a, t_stack **stack_b)
-{
-	int temp;
+// void tri_5(t_stack **stack_a, t_stack **stack_b)
+// {
+// 	int temp;
 
-	temp 
-}
+
+// }
 
 void choice_tri(t_stack **stack_a, t_stack *stack_b, int size)
 {

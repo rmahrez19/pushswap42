@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/28 16:27:46 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:53:31 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-# include <stdlib.h>
 # include <limits.h>
+# include <stdlib.h>
 
 typedef struct s_stack
 {
@@ -24,6 +24,16 @@ typedef struct s_stack
 	struct s_stack	*prev;
 
 }					t_stack;
+
+typedef struct s_var
+{
+	int				size_stack;
+	int				max_value;
+	int				min_value;
+	int max_position;
+	int min_position;
+
+}					t_var;
 
 void				print_error(char *str);
 void				ft_check_error(char **argv);
@@ -51,6 +61,6 @@ void				rrb(t_stack **stack_b);
 
 // tri
 
-void choice_tri(t_stack **stack_a, t_stack *stack_b, int size);
+void				choice_tri(t_stack **stack_a, t_stack *stack_b, int size);
 
 #endif
