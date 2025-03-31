@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:56:38 by ramahrez          #+#    #+#             */
-/*   Updated: 2024/11/25 16:46:33 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/31 22:47:33 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_strlcpy(char *src, char *dest, int l)
 	}
 }
 
-int	ft_test(t_var *s_var)
+int	ft_test(t_vars *s_var)
 {
 	while (s_var->buffer[s_var->line_lenght]
 		&&s_var->buffer[s_var->line_lenght] != '\n')
@@ -43,7 +43,7 @@ int	ft_test(t_var *s_var)
 	return (1);
 }
 
-int	ft_read_alloc_fd(t_var *s_var, int fd)
+int	ft_read_alloc_fd(t_vars *s_var, int fd)
 {
 	char	*temp;
 	int		a;
@@ -71,15 +71,15 @@ int	ft_read_alloc_fd(t_var *s_var, int fd)
 	return (s_var->line_lenght);
 }
 
-void	*ft_nul(t_var s_var, char *trace)
-{	
+void	*ft_nul(t_vars s_var, char *trace)
+{
 	ft_strlcpy("", trace, BUFFER_SIZE);
 	return (free(s_var.buffer), NULL);
 }
 
 char	*get_next_line(int fd)
 {
-	t_var		s_var;
+	t_vars		s_var;
 	char		*ret;
 	static char	trace[FD][BUFFER_SIZE] = {0};
 

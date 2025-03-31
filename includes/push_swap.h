@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/31 19:53:31 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/31 23:28:22 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ typedef struct s_var
 	int				size_stack;
 	int				max_value;
 	int				min_value;
-	int max_position;
-	int min_position;
+	int				max_position;
+	int				min_position;
 
 }					t_var;
 
@@ -54,6 +54,7 @@ void				ft_delone_first(t_stack **stack);
 void				sa(t_stack **stack_a);
 void				sb(t_stack **stack_b);
 void				pb(t_stack **stack_a, t_stack **stack_b);
+void				pa(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
 void				rra(t_stack **stack_a);
@@ -61,6 +62,8 @@ void				rrb(t_stack **stack_b);
 
 // tri
 
-void				choice_tri(t_stack **stack_a, t_stack *stack_b, int size);
+void				choice_tri(t_stack **stack_a, t_stack *stack_b,
+						t_var s_var);
+void				init_position_value(t_stack **stack, t_var *s_var);
 
 #endif

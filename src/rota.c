@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/26 16:24:40 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/03/31 23:37:58 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 
 	if (!(*stack_b)->content)
 		return ;
-	n = (*stack_a)->content;
+	n = (*stack_b)->content;
 	if (!*stack_a)
 		ft_create_head_node(stack_a, n);
 	else
@@ -99,7 +99,7 @@ void rra(t_stack **stack_a)
 		return ;
 	*stack_a = (*stack_a)->prev;
 
-	ft_printf("ra\n");
+	ft_printf("rra\n");
 }
 
 void rrb(t_stack **stack_b)
@@ -108,5 +108,5 @@ void rrb(t_stack **stack_b)
 		return ;
 	*stack_b = (*stack_b)->prev;
 
-	ft_printf("rb\n");
+	ft_printf("rrb\n");
 }
