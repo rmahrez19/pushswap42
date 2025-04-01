@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/31 23:44:04 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/01 16:46:20 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,6 @@ int	main(int ac, char **av)
 	s_var.size_stack = str_list(&stack_a);
 	if(s_var.size_stack <= 1)
 		exit(0);
-	print_list(&stack_a);
 	choice_tri(&stack_a, stack_b, s_var);
-	// print_list(&stack_a);
-	// ft_printf("b = ");
-	// print_list(&stack_b);
-	print_every_list(stack_a, stack_b);
 	ft_free();
 }

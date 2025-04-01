@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/31 23:28:22 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/01 17:38:23 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ void				rrb(t_stack **stack_b);
 void				choice_tri(t_stack **stack_a, t_stack *stack_b,
 						t_var s_var);
 void				init_position_value(t_stack **stack, t_var *s_var);
+int					ft_nombre_significatif(int nbr, int place);
+void				tri_list(t_stack **stack_a, t_var s_var);
 
 #endif
