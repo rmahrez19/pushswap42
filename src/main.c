@@ -31,10 +31,7 @@ int	main(int ac, char **av)
 	t_var s_var;
 	stack_b = NULL;
 	if (ac < 2)
-	{
-		ft_printf(RED "ERROR NO ARGUMENT" RESET);
-		exit(0);
-	}
+		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	s_var.size_stack = str_list(&stack_a);
 	if(s_var.size_stack <= 1)

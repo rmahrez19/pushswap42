@@ -86,10 +86,12 @@ void choice_tri(t_stack **stack_a, t_stack *stack_b, t_var s_var)
 	if (s_var.size_stack == 2)
 		tri_2(stack_a);
 	if(s_var.size_stack == 3)
+	{
 		tri_3(stack_a);
+		print_list(stack_a);
+	}
 	else
 	{
 		tri_list(stack_a, s_var);
 	}
-	print_list(stack_a);
 }

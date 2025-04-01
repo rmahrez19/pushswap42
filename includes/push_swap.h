@@ -43,6 +43,8 @@ void				ft_stackadd_front(t_stack **lst, t_stack *new);
 
 // liste chainee;
 
+
+void print_every_list(t_stack *stack_a, t_stack *stack_b);
 void				ft_create_head_node(t_stack **stack_a, int n);
 void				ft_creat_node(t_stack **stack_a, int n);
 void				print_list(t_stack **stack_a);

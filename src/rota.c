@@ -16,6 +16,8 @@ void	sa(t_stack **stack_a)
 {
 	int	temp;
 
+	if(!*stack_a || !(*stack_a)->next)
+		return ;
 	temp = (*stack_a)->content;
 	(*stack_a)->content = (*stack_a)->next->content;
 	(*stack_a)->next->content = temp;

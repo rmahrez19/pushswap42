@@ -14,6 +14,8 @@
 
 int	str_list(t_stack **stack_a)
 {
+	if(!*stack_a)
+		return (0);
 	size_t	size;
 	t_stack	*current;
 

@@ -15,7 +15,7 @@
 void	print_error(char *str)
 {
 	ft_free();
-	printf(RED "%s" RESET, str);
+	printf(RED "%s\n" RESET, str);
 	exit(0);
 }
 
