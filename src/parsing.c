@@ -54,4 +54,4 @@ t_stack	*ft_pars(char **argv)
 	ft_check_error(argv);
 	ft_pars_line(argv, &stack_a);
 	return (stack_a);
-}
+} 
