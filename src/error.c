@@ -97,6 +97,7 @@ void	ft_check_value(char **argv)
 		i = 0;
 		j++;
 	}
+	count = 0;
 	if (count > 12)
 		print_error("number too big or too small");
 }
