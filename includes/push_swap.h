@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/03 15:11:22 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:20:13 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 typedef struct s_stack
 {
+	int				index;
 	long			content;
 	struct s_stack	*next;
 	struct s_stack	*prev;
@@ -45,8 +46,8 @@ int					ft_check_double(t_stack **stack, int n);
 // liste chainee;
 
 void				print_every_list(t_stack *stack_a, t_stack *stack_b);
-void				ft_create_head_node(t_stack **stack_a, int n);
-void				ft_creat_node(t_stack **stack_a, int n);
+void				ft_create_head_node(t_stack **stack_a, int n, int index);
+void				ft_creat_node(t_stack **stack_a, int n, int index);
 void				print_list(t_stack **stack_a);
 int					str_list(t_stack **stack_a);
 void				ft_delone_first(t_stack **stack);

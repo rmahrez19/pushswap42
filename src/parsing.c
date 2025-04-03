@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/02 16:17:58 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/03 20:11:18 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 void	ft_attribute(int n, t_stack **stack)
-{
+{	static int index = 0;
 	if (!(n >= INT_MIN && n <= INT_MAX))
 		print_error("NUMBER TOO BIG OR TOO SMALL");
 	if(ft_check_double(stack, n))
 		print_error("SAME VALUE");
 	if (!*stack)
-		ft_create_head_node(stack, n);
+		ft_create_head_node(stack, n, index);
 	else
-		ft_creat_node(stack, n);
+		ft_creat_node(stack, n, index);
 }
 
 void	ft_pars_line(char **argv, t_stack **stack_a)
@@ -56,4 +56,4 @@ t_stack	*ft_pars(char **argv)
 	ft_check_error(argv);
 	ft_pars_line(argv, &stack_a);
 	return (stack_a);
-} 
+}

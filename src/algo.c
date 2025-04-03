@@ -6,16 +6,16 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/03 18:25:28 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:22:04 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void move_to_top(t_stack **stack, int index)
-{
-	
-}
+// void move_to_top(t_stack **stack, int index)
+// {
+
+// }
 
 
 void	tri_list(t_stack **stack_a, t_var s_var)
