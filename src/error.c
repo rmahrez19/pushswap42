@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/18 18:17:24 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:36:26 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	ft_check_signe(char **argv)
 	int	j;
 	int	flag;
 
-	i = 0;
 	j = 1;
 	flag = 0;
 	while (argv[j])
 	{
+		i = 0;
 		while (argv[j][i])
 		{
 			if (argv[j][i] != ' ' && flag == 0)
@@ -44,7 +44,6 @@ void	ft_check_signe(char **argv)
 				print_error("arg invalid");
 			i++;
 		}
-		i = 0;
 		j++;
 	}
 }
@@ -87,7 +86,7 @@ void	ft_check_value(char **argv)
 				count++;
 			else
 			{
-				if (count >= 19)
+				if (count >= 12)
 					print_error("NUMBER TOO BIG OR TOO SMALL");
 				else
 					count = 0;
@@ -96,10 +95,10 @@ void	ft_check_value(char **argv)
 		}
 		i = 0;
 		j++;
-	}
-	count = 0;
-	if (count > 12)
+	if (count >= 12)
 		print_error("number too big or too small");
+	count = 0;
+	}
 }
 
 void	ft_check_error(char **argv)

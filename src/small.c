@@ -11,7 +11,7 @@ void tri_2(t_stack **stack_a)
 		sa(stack_a);
 }
 
-void	tri_3(t_stack **stack_a)
+void	tri_3_croissant(t_stack **stack_a)
 {
 	int	num_1;
 	int	num_2;
@@ -75,19 +75,19 @@ void tri_5(t_stack **stack_a, t_stack *stack_b, t_var *s_var)
 		}
 		i++;
 	}
-	tri_3(stack_a);
+	// tri_3(stack_a);
 	pa(stack_a, &stack_b);
 	pa(stack_a, &stack_b);
 }
 
-void choice_tri(t_stack **stack_a, t_stack *stack_b, t_var s_var)
+void choice_tri(t_stack **stack_a, t_var s_var)
 {
-	(void)stack_b;
+	s_var.size_stack = str_list(stack_a); 
 	if (s_var.size_stack == 2)
 		tri_2(stack_a);
 	if(s_var.size_stack == 3)
 	{
-		tri_3(stack_a);
+		tri_3_croissant(stack_a);
 		print_list(stack_a);
 	}
 	else

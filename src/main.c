@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/01 16:46:20 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:41:02 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,14 @@ void print_every_list(t_stack *stack_a, t_stack *stack_b)
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack *stack_b;
 	t_var s_var;
-	stack_b = NULL;
+
 	if (ac < 2)
 		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	s_var.size_stack = str_list(&stack_a);
 	if(s_var.size_stack <= 1)
 		exit(0);
-	choice_tri(&stack_a, stack_b, s_var);
+	choice_tri(&stack_a, s_var);
 	ft_free();
 }

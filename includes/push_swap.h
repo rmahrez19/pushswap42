@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/01 17:38:23 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:40:57 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void				ft_check_error(char **argv);
 t_stack				*ft_pars(char **argv);
 t_stack				*ft_stacknew(int content);
 void				ft_stackadd_front(t_stack **lst, t_stack *new);
+int ft_check_double(t_stack **stack, int n);
 
 // liste chainee;
 
@@ -64,10 +65,10 @@ void				rrb(t_stack **stack_b);
 
 // tri
 
-void				choice_tri(t_stack **stack_a, t_stack *stack_b,
-						t_var s_var);
+void				choice_tri(t_stack **stack_a, t_var s_var);
 void				init_position_value(t_stack **stack, t_var *s_var);
 int					ft_nombre_significatif(int nbr, int place);
 void				tri_list(t_stack **stack_a, t_var s_var);
+void	tri_3_croissant(t_stack **stack_a);
 
 #endif
