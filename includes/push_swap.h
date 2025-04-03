@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/02 19:40:57 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/03 15:11:22 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,11 @@ void				ft_check_error(char **argv);
 t_stack				*ft_pars(char **argv);
 t_stack				*ft_stacknew(int content);
 void				ft_stackadd_front(t_stack **lst, t_stack *new);
-int ft_check_double(t_stack **stack, int n);
+int					ft_check_double(t_stack **stack, int n);
 
 // liste chainee;
 
-
-void print_every_list(t_stack *stack_a, t_stack *stack_b);
+void				print_every_list(t_stack *stack_a, t_stack *stack_b);
 void				ft_create_head_node(t_stack **stack_a, int n);
 void				ft_creat_node(t_stack **stack_a, int n);
 void				print_list(t_stack **stack_a);
@@ -64,11 +63,12 @@ void				rra(t_stack **stack_a);
 void				rrb(t_stack **stack_b);
 
 // tri
-
+int					verif_tri_c(t_stack **stack);
+int					verif_tri_d(t_stack **stack);
 void				choice_tri(t_stack **stack_a, t_var s_var);
 void				init_position_value(t_stack **stack, t_var *s_var);
 int					ft_nombre_significatif(int nbr, int place);
 void				tri_list(t_stack **stack_a, t_var s_var);
-void	tri_3_croissant(t_stack **stack_a);
+void				tri_3_croissant(t_stack **stack_a);
 
 #endif

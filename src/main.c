@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/02 19:41:02 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/03 14:21:17 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void print_every_list(t_stack *stack_a, t_stack *stack_b)
+void	print_every_list(t_stack *stack_a, t_stack *stack_b)
 {
 	printf("stack a\n");
 	print_list(&stack_a);
@@ -21,20 +21,29 @@ void print_every_list(t_stack *stack_a, t_stack *stack_b)
 	printf("stack_b");
 	print_list(&stack_b);
 	printf("\n-----------------------------------------------------------------------------------\n");
+}
 
+void	cost_account(void)
+{
+	int	i = 0;
+
+	while (get_next_line(0))
+		i++;
+	printf("coup = %d", i);
 }
 
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_var s_var;
+	t_var	s_var;
 
 	if (ac < 2)
 		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	s_var.size_stack = str_list(&stack_a);
-	if(s_var.size_stack <= 1)
+	if (s_var.size_stack <= 1)
 		exit(0);
 	choice_tri(&stack_a, s_var);
 	ft_free();
+	// cost_account();
 }
