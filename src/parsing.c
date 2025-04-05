@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/03 20:11:18 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/04 19:48:09 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 void	ft_attribute(int n, t_stack **stack)
-{	static int index = 0;
+{
 	if (!(n >= INT_MIN && n <= INT_MAX))
 		print_error("NUMBER TOO BIG OR TOO SMALL");
 	if(ft_check_double(stack, n))
 		print_error("SAME VALUE");
 	if (!*stack)
-		ft_create_head_node(stack, n, index);
+		ft_create_head_node(stack, n);
 	else
-		ft_creat_node(stack, n, index);
+		ft_creat_node(stack, n);
 }
 
 void	ft_pars_line(char **argv, t_stack **stack_a)
@@ -47,6 +47,7 @@ void	ft_pars_line(char **argv, t_stack **stack_a)
 		i = 0;
 		j++;
 	}
+	
 }
 
 t_stack	*ft_pars(char **argv)
@@ -55,5 +56,6 @@ t_stack	*ft_pars(char **argv)
 	stack_a = NULL;
 	ft_check_error(argv);
 	ft_pars_line(argv, &stack_a);
+	// init_index(&stack_a);
 	return (stack_a);
 }

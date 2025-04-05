@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   piles.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/03 20:21:53 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/04 16:24:51 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	print_list(t_stack **stack_a)
 	}
 }
 
-void	ft_creat_node(t_stack **stack_a, int n, int index)
+void	ft_creat_node(t_stack **stack_a, int n)
 {
 	t_stack	*prev;
 	t_stack	*new;
@@ -60,20 +60,18 @@ void	ft_creat_node(t_stack **stack_a, int n, int index)
 	if (!new)
 		return ;
 	new->content = n;
-	new->index = index;
 	new->next = *stack_a;
 	new->prev = prev;
 	prev->next = new;
 	(*stack_a)->prev = new;
 }
 
-void	ft_create_head_node(t_stack **stack_a, int n, int index)
+void	ft_create_head_node(t_stack **stack_a, int n)
 {
 	*stack_a = ft_malloc(sizeof(t_stack));
 	if (!*stack_a)
 		print_error(RED "erreur" RESET);
 	(*stack_a)->content = n;
-	(*stack_a)->index = index;
 	(*stack_a)->prev = *stack_a;
 	(*stack_a)->next = *stack_a;
 }
