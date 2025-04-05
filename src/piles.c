@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   piles.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/04 16:24:51 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/05 16:39:26 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,29 +41,34 @@ void	print_list(t_stack **stack_a)
 	while (1)
 	{
 		printf("nombre = |%ld|\n", current->content);
-		printf("index = |%d|\n", current->index);
+		// printf("index = |%d|\n", current->index);
 		current = current->next;
 		if (current == *stack_a || !current)
 			break ;
 	}
 }
 
-void	ft_creat_node(t_stack **stack_a, int n)
+void	ft_creat_node(t_stack **stack, int n)
 {
-	t_stack	*prev;
 	t_stack	*new;
+	t_stack	*last;
 
-	if (!*stack_a || !stack_a)
+	if (!stack || !*stack)
 		return ;
-	prev = (*stack_a)->prev;
+
 	new = ft_malloc(sizeof(t_stack));
 	if (!new)
 		return ;
+
 	new->content = n;
-	new->next = *stack_a;
-	new->prev = prev;
-	prev->next = new;
-	(*stack_a)->prev = new;
+	new->next = *stack;
+	new->prev = (*stack)->prev;
+
+	last = (*stack)->prev;
+	last->next = new;
+	(*stack)->prev = new;
+
+	*stack = new; // mettre à jour la tête
 }
 
 void	ft_create_head_node(t_stack **stack_a, int n)
@@ -76,11 +81,31 @@ void	ft_create_head_node(t_stack **stack_a, int n)
 	(*stack_a)->next = *stack_a;
 }
 
-void	ft_stackadd_front(t_stack **lst, t_stack *new)
+void	ft_add_to_front(t_stack **stack, int n)
 {
-	if (lst && new)
+	t_stack *new;
+	t_stack *last;
+
+	new = ft_malloc(sizeof(t_stack));
+	if (!new)
+		return ;
+
+	new->content = n;
+
+	if (!*stack)
 	{
-		new->next = *lst;
+		new->next = new;
+		new->prev = new;
+		*stack = new;
+	}
+	else
+	{
+		last = (*stack)->prev;
+		new->next = *stack;
+		new->prev = last;
+		last->next = new;
+		(*stack)->prev = new;
+		*stack = new; // 👈 ça, c’est ce qui garantit que c’est le NOUVEAU début
 	}
 }
 
@@ -110,9 +135,9 @@ void	ft_delone_first(t_stack **stack)
 		*stack = NULL;
 		return ;
 	}
-	last = *stack;
-	while (last->next != *stack)
-		last = last->next;
+	last = first->prev;
 	*stack = first->next;
+
 	last->next = *stack;
+	(*stack)->prev = last;
 }

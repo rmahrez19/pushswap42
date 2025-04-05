@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/04 20:21:33 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/05 14:08:10 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void	tri_list(t_stack **stack_a, t_var s_var)
 		}
 		move_to_top(stack_a, s_var.min_position);
 		pb(stack_a, &stack_b);
+		printf("satck b = =>");
+		print_list(&stack_b);
 	}
 	while(stack_b)
 		pa(stack_a, &stack_b);

@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/03 14:21:17 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/05 14:43:50 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,22 @@ void	cost_account(void)
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
+	// t_stack	*stack_b;
 	t_var	s_var;
 
+	// stack_b = NULL;
 	if (ac < 2)
 		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	s_var.size_stack = str_list(&stack_a);
 	if (s_var.size_stack <= 1)
 		exit(0);
-	choice_tri(&stack_a, s_var);
+	print_list(&stack_a);
+		// choice_tri(&stack_a, s_var);
+	// pb(&stack_a, &stack_b);
+	// print_every_list(stack_a, stack_a);
+	// pa(&stack_a, &stack_b);
+	// print_every_list(stack_a, stack_a);
 	ft_free();
 	// cost_account();
 }

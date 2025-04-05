@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/04 20:21:51 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/05 16:39:53 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ int					ft_check_double(t_stack **stack, int n);
 
 void				print_every_list(t_stack *stack_a, t_stack *stack_b);
 void				ft_create_head_node(t_stack **stack_a, int n);
-void				ft_creat_node(t_stack **stack_a, int n);
+void				ft_creat_node(t_stack **stack, int n);
 void				print_list(t_stack **stack_a);
 int					str_list(t_stack **stack_a);
 void				ft_delone_first(t_stack **stack);
-void init_index(t_stack **stack);
-
+void				init_index(t_stack **stack);
+void				ft_add_to_front(t_stack **stack, int n);
 // rotaion
 
 void				sa(t_stack **stack_a);
@@ -73,7 +73,6 @@ int					ft_nombre_significatif(int nbr, int place);
 void				tri_list(t_stack **stack_a, t_var s_var);
 void				tri_3_croissant(t_stack **stack_a);
 
-
 // utils
-void ft_init(t_stack **stack, t_var *s_var);
+void				ft_init(t_stack **stack, t_var *s_var);
 #endif

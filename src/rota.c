@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/03/31 23:37:58 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/05 14:10:36 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 {
 	int	n;
 
-	if (!(*stack_a)->content)
+	if (!(*stack_a))
 		return ;
 	n = (*stack_a)->content;
 	if (!*stack_b)
@@ -66,7 +66,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 {
 	int	n;
 
-	if (!(*stack_b)->content)
+	if (!(*stack_b))
 		return ;
 	n = (*stack_b)->content;
 	if (!*stack_a)
