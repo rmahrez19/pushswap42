@@ -1,0 +1,3894 @@
+# PROJECT ANALYSIS FOR AI ASSISTANT
+
+## 📦 GENERAL INFORMATION
+
+- **Project path**: `/home/ramahrez/tronccommun/cercle2/pushswap`
+- **Total files**: 132
+- **Files included in this analysis**: 132
+- **Main languages used**:
+  - C (62 files)
+  - C/C++ Header (5 files)
+
+## 🗂️ PROJECT STRUCTURE
+
+```
+/home/ramahrez/tronccommun/cercle2/pushswap
+    ├── includes
+    │   └── push_swap.h
+    ├── libft
+    │   ├── gnl
+    │   │   ├── get_next_line_bonus.c
+    │   │   ├── get_next_line_bonus.h
+    │   │   └── get_next_line_bonus.o
+    │   ├── printf
+    │   │   ├── base.c
+    │   │   ├── base.o
+    │   │   ├── ft_printf.h
+    │   │   ├── hexa.c
+    │   │   ├── hexa.o
+    │   │   ├── libft.c
+    │   │   └── libft.o
+    │   ├── color.h
+    │   ├── ft_atoi.c
+    │   ├── ft_atoi.o
+    │   ├── ft_atoi_base.c
+    │   ├── ft_atoi_base.o
+    │   ├── ft_bzero.c
+    │   ├── ft_bzero.o
+    │   ├── ft_calloc.c
+    │   ├── ft_calloc.o
+    │   ├── ft_free.c
+    │   ├── ft_free.o
+    │   ├── ft_isalnum.c
+    │   ├── ft_isalnum.o
+    │   ├── ft_isalpha.c
+    │   ├── ft_isalpha.o
+    │   ├── ft_isascii.c
+    │   ├── ft_isascii.o
+    │   ├── ft_isdigit.c
+    │   ├── ft_isdigit.o
+    │   ├── ft_isprint.c
+    │   ├── ft_isprint.o
+    │   ├── ft_itoa.c
+    │   ├── ft_itoa.o
+    │   ├── ft_lstadd_back_bonus.c
+    │   ├── ft_lstadd_back_bonus.o
+    │   ├── ft_lstadd_front_bonus.c
+    │   ├── ft_lstadd_front_bonus.o
+    │   ├── ft_lstclear_bonus.c
+    │   ├── ft_lstclear_bonus.o
+    │   ├── ft_lstdelone_bonus.c
+    │   ├── ft_lstdelone_bonus.o
+    │   ├── ft_lstiter_bonus.c
+    │   ├── ft_lstiter_bonus.o
+    │   ├── ft_lstlast_bonus.c
+    │   ├── ft_lstlast_bonus.o
+    │   ├── ft_lstmap_bonus.c
+    │   ├── ft_lstmap_bonus.o
+    │   ├── ft_lstnew_bonus.c
+    │   ├── ft_lstnew_bonus.o
+    │   ├── ft_lstsize_bonus.c
+    │   ├── ft_lstsize_bonus.o
+    │   ├── ft_malloc.c
+    │   ├── ft_malloc.o
+    │   ├── ft_memchr.c
+    │   ├── ft_memchr.o
+    │   ├── ft_memcmp.c
+    │   ├── ft_memcmp.o
+    │   ├── ft_memcpy.c
+    │   ├── ft_memcpy.o
+    │   ├── ft_memmove.c
+    │   ├── ft_memmove.o
+    │   ├── ft_memset.c
+    │   ├── ft_memset.o
+    │   ├── ft_putchar_fd.c
+    │   ├── ft_putchar_fd.o
+    │   ├── ft_putendl_fd.c
+    │   ├── ft_putendl_fd.o
+    │   ├── ft_putnbr_fd.c
+    │   ├── ft_putnbr_fd.o
+    │   ├── ft_putstr_fd.c
+    │   ├── ft_putstr_fd.o
+    │   ├── ft_realloc.c
+    │   ├── ft_realloc.o
+    │   ├── ft_split.c
+    │   ├── ft_split.o
+    │   ├── ft_strchr.c
+    │   ├── ft_strchr.o
+    │   ├── ft_strdup.c
+    │   ├── ft_strdup.o
+    │   ├── ft_striteri.c
+    │   ├── ft_striteri.o
+    │   ├── ft_strjoin.c
+    │   ├── ft_strjoin.o
+    │   ├── ft_strlcat.c
+    │   ├── ft_strlcat.o
+    │   ├── ft_strlcpy.c
+    │   ├── ft_strlcpy.o
+    │   ├── ft_strlen.c
+    │   ├── ft_strlen.o
+    │   ├── ft_strmapi.c
+    │   ├── ft_strmapi.o
+    │   ├── ft_strncmp.c
+    │   ├── ft_strncmp.o
+    │   ├── ft_strnstr.c
+    │   ├── ft_strnstr.o
+    │   ├── ft_strrchr.c
+    │   ├── ft_strrchr.o
+    │   ├── ft_strtrim.c
+    │   ├── ft_strtrim.o
+    │   ├── ft_substr.c
+    │   ├── ft_substr.o
+    │   ├── ft_tolower.c
+    │   ├── ft_tolower.o
+    │   ├── ft_toupper.c
+    │   ├── ft_toupper.o
+    │   ├── libft.a
+    │   ├── libft.h
+    │   └── Makefile
+    ├── obj
+    │   ├── algo.o
+    │   ├── error.o
+    │   ├── init.o
+    │   ├── main.o
+    │   ├── parsing.o
+    │   ├── rota.o
+    │   ├── small.o
+    │   ├── utils.o
+    │   └── utils_pile.o
+    ├── src
+    │   ├── algo.c
+    │   ├── error.c
+    │   ├── init.c
+    │   ├── main.c
+    │   ├── parsing.c
+    │   ├── piles.c
+    │   ├── rota.c
+    │   ├── small.c
+    │   ├── utils.c
+    │   ├── utils_pile.c
+    │   └── value.c
+    ├── checker_linux
+    ├── Makefile
+    └── pushwap
+```
+
+### 📂 Main Components
+
+- **`includes/`** - 
+- **`libft/`** - 
+- **`obj/`** - 
+- **`src/`** - 
+
+## 🔄 FILE RELATIONSHIPS
+
+### Core Files (most referenced)
+
+- **`pushswap/libft/libft.h`** is imported by 45 files
+- **`pushswap/includes/push_swap.h`** is imported by 10 files
+- **`pushswap/libft/printf/ft_printf.h`** is imported by 3 files
+
+### Dependencies by File
+
+- **`pushswap/libft/ft_atoi.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_atoi_base.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_bzero.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_calloc.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_free.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_isalnum.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_isalpha.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_isascii.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_isdigit.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_itoa.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstadd_back_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstadd_front_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstclear_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstdelone_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstiter_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstlast_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstmap_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstnew_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_lstsize_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_malloc.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_memchr.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_memcmp.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_memcpy.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_memmove.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_memset.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_putchar_fd.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_putendl_fd.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_putnbr_fd.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_putstr_fd.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_realloc.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_split.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strchr.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strdup.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_striteri.c`**:
+  - *External dependencies*: `stdlib.h`
+- **`pushswap/libft/ft_strjoin.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strlcat.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strlcpy.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strlen.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strmapi.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strncmp.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strnstr.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strrchr.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_strtrim.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_substr.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_tolower.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/ft_toupper.c`**:
+  - *Internal dependencies*: `pushswap/libft/libft.h`
+- **`pushswap/libft/gnl/get_next_line_bonus.c`**:
+  - *Internal dependencies*: `pushswap/libft/gnl/get_next_line_bonus.h`
+- **`pushswap/libft/printf/base.c`**:
+  - *Internal dependencies*: `pushswap/libft/printf/ft_printf.h`
+  - *External dependencies*: `stdio.h`
+- **`pushswap/libft/printf/hexa.c`**:
+  - *Internal dependencies*: `pushswap/libft/printf/ft_printf.h`
+- **`pushswap/libft/printf/libft.c`**:
+  - *Internal dependencies*: `pushswap/libft/printf/ft_printf.h`
+- **`pushswap/src/algo.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/error.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/init.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/main.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/parsing.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/piles.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/rota.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/small.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/utils.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+- **`pushswap/src/utils_pile.c`**:
+  - *Internal dependencies*: `pushswap/includes/push_swap.h`
+
+## 📄 FILE CONTENTS
+
+*Note: The content below includes only selected files.*
+
+### pushswap/Makefile
+
+```
+ # Variables
+CC          = cc
+CFLAGS      = -Wall -Wextra -Werror -g
+NAME        = pushwap
+LIBFT_DIR   = libft
+LIBFT       = $(LIBFT_DIR)/libft.a
+SRC_DIR     = src
+OBJ_DIR     = obj
+INC_DIR     = includes
+MKDIR       = mkdir -p
+
+# Recherche des fichiers sources automatiquement dans SRC_DIR
+VPATH       = $(SRC_DIR)
+
+# Définition des fichiers sources (sans besoin de préfixer par SRC_DIR)
+SRCS        = main.c parsing.c piles.c error.c rota.c small.c utils.c algo.c utils_pile.c init.c
+# Fichiers objets
+OBJS        = $(SRCS:%.c=$(OBJ_DIR)/%.o)
+
+# Règle par défaut
+all: $(NAME)
+
+# Compilation de l'exécutable
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT)
+
+# Compilation des fichiers .c en .o
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Création du dossier obj s'il n'existe pas
+$(OBJ_DIR):
+	$(MKDIR) $(OBJ_DIR)
+
+# Compilation de la libft
+$(LIBFT):
+	make -C $(LIBFT_DIR)
+
+# Nettoyage des fichiers objets
+clean:
+	$(RM) -r $(OBJ_DIR)
+	make -C $(LIBFT_DIR) clean
+
+# Nettoyage complet (binaire + objets)
+fclean: clean
+	$(RM) $(NAME)
+	make -C $(LIBFT_DIR) fclean
+
+# Recompilation complète
+re: fclean all
+
+.PHONY: all clean fclean re
+```
+
+### pushswap/libft/ft_tolower.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/14 08:01:16 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:37:59 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
+}
+```
+
+### pushswap/libft/ft_substr.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:47:01 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:37:47 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*res;
+	size_t	i;
+	size_t	slen;
+
+	if (!s)
+		return (NULL);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	res = malloc((len + 1) * sizeof(char));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (s[start + i] && i < len)
+	{
+		res[i] = s[start + i];
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
+}
+```
+
+### pushswap/libft/ft_bzero.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/18 14:04:48 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 14:07:45 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_bzero(void *s, unsigned long n)
+{
+	ft_memset(s, 0, n);
+}
+```
+
+### pushswap/libft/ft_calloc.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 23:02:49 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/19 20:00:30 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*ptr;
+
+	ptr = ft_malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
+}
+```
+
+### pushswap/libft/ft_free.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/26 05:28:23 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/19 20:00:12 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_free(void)
+{
+	ft_malloc(0);
+}
+```
+
+### pushswap/libft/libft.h
+
+```h
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/18 12:20:58 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/06 15:46:55 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <limits.h>
+# include <stdint.h>
+# include <ctype.h>
+# include "color.h"
+# include "gnl/get_next_line_bonus.h"
+# include "printf/ft_printf.h"
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int nb, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_bzero(void *s, size_t n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_free(void);
+
+void	*ft_realloc(void *old, int old_size, int new_size, int data_size);
+void	*ft_calloc(size_t count, size_t size);
+void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memchr(const void *s, int c, size_t len);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_malloc(size_t size);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char sep);
+char	*ft_strdup(const char *s);
+char	*ft_strrchr(char const *s, int c);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
+char	*ft_itoa(int n);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int nb);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+int		ft_atoi(const char *str);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_isprint(int c);
+int		ft_isascii(int c);
+int		ft_isalnum(int c);
+int		ft_isdigit(int c);
+int		ft_isalpha(int c);
+int		ft_atoi_base(char *str, char *base);
+
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+/*-----------------------bonus---------------------------*/
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+#endif
+```
+
+### pushswap/libft/color.h
+
+```h
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   color.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/27 17:42:42 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/06 15:46:38 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef COLOR_H
+# define COLOR_H
+
+# define BLACK   "\033[30m"
+# define RED     "\033[31m"
+# define GREEN   "\033[32m"
+# define YELLOW  "\033[33m"
+# define BLUE    "\033[34m"
+# define MAGENTA "\033[35m"
+# define CYAN    "\033[36m"
+# define WHITE   "\033[37m"
+# define RESET   "\033[0m"
+
+#endif
+```
+
+### pushswap/libft/ft_atoi.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 23:01:13 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/19 20:01:39 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_atoi(const char *str)
+{
+	int		i;
+	int		n;
+	long	result;
+
+	i = 0;
+	n = 1;
+	result = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			n = -1;
+		i++;
+	}
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * n);
+}
+```
+
+### pushswap/libft/ft_toupper.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/14 08:01:25 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:38:13 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
+}
+```
+
+### pushswap/libft/ft_strmapi.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:40:51 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/13 16:41:02 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	char			*res;
+
+	i = 0;
+	res = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!res)
+		return (NULL);
+	while (s[i])
+	{
+		res[i] = f(i, s[i]);
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
+}
+```
+
+### pushswap/libft/ft_strncmp.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/14 08:00:52 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:35:28 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_strncmp(const char	*s1, const char	*s2, unsigned int n)
+{
+	unsigned int	i;
+	unsigned char	*c1;
+	unsigned char	*c2;
+
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (c1[i] && c2[i] && c1[i] == c2[i] && i < n - 1)
+	{
+		i++;
+	}
+	return (c1[i] - c2[i]);
+}
+```
+
+### pushswap/libft/ft_strnstr.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:42:56 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:35:56 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
+{
+	size_t	i;
+	size_t	y;
+	size_t	len;
+
+	i = 0;
+	len = ft_strlen(needle);
+	if (!haystack && n == 0)
+		return (NULL);
+	if (len == 0)
+		return ((char *)haystack);
+	while (haystack[i] && i < n)
+	{
+		y = 0;
+		while (needle[y] == haystack[i + y] && (i + y) < n)
+		{
+			if (y == len - 1)
+				return ((char *)haystack + i);
+			y++;
+		}
+		i++;
+	}
+	return (NULL);
+}
+```
+
+### pushswap/libft/ft_strrchr.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:43:46 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:36:15 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strrchr(char const *s, int c)
+{
+	int	i;
+
+	i = ft_strlen(s);
+	if (c == 0)
+		return ((char *)s + i);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
+}
+```
+
+### pushswap/libft/ft_strtrim.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:45:44 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:36:55 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	ft_totrim(char c, char const *set)
+{
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		min;
+	int		max;
+	int		len;
+	char	*res;
+
+	min = 0;
+	while (s1[min] && ft_totrim(s1[min], set))
+		min++;
+	max = ft_strlen(s1);
+	while (max > min && ft_totrim(s1[max - 1], set))
+		max--;
+	len = max - min;
+	res = ft_substr(s1, min, len);
+	if (!res)
+		return (NULL);
+	res[len] = '\0';
+	return (res);
+}
+```
+
+### pushswap/libft/ft_lstadd_front_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 06:15:14 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/11 12:13:40 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (lst && new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
+}
+```
+
+### pushswap/libft/ft_lstclear_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:20:17 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 12:44:05 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*current;
+	t_list	*next_lst;
+
+	if (lst == NULL || *lst == NULL || !del)
+		return ;
+	current = *lst;
+	while (current != NULL)
+	{
+		next_lst = current->next;
+		del(current->content);
+		free(current);
+		current = next_lst;
+	}
+	*lst = NULL;
+}
+```
+
+### pushswap/libft/ft_lstdelone_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:20:19 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 12:19:34 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	if (lst && del)
+		del(lst->content);
+	free(lst);
+}
+```
+
+### pushswap/libft/ft_lstiter_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:20:23 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 12:44:32 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+}
+```
+
+### pushswap/libft/ft_lstlast_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:20:25 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 13:37:46 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
+}
+```
+
+### pushswap/libft/ft_lstmap_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:20:28 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 16:33:21 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*new_lst;
+	t_list	*nex_ele;
+	void	*content;
+
+	if (!lst || !f | !del)
+		return (NULL);
+	new_lst = NULL;
+	while (lst)
+	{
+		content = f(lst->content);
+		nex_ele = ft_lstnew(content);
+		if (!nex_ele)
+		{
+			ft_lstclear(&new_lst, del);
+			del(content);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, nex_ele);
+		lst = lst->next;
+	}			
+	return (new_lst);
+}
+/*
+ int    main(void)
+{
+    t_list    *head;
+    t_list    *second;
+    t_list    *third;
+    t_list    *explorer;
+    t_list    *fourth;
+    t_list    *map;
+
+    //PREMIER MAILLON
+    head = NULL;
+    head = malloc(sizeof(t_list));
+    if (head == NULL)
+        return (1);
+    head->content = ft_strdup("C'est le debut de la grande aventure");
+    head->next = NULL;
+    //SECOND MAILLON
+    second = NULL;
+    second = malloc(sizeof(t_list));
+    if (second == NULL)
+        return (2);
+    second->content = ft_itoa(171096);
+    second->next = NULL;
+    head->next = second; // maillon 1 relie le 2
+    //TROISIEME MAILLON
+    third = NULL;
+    third = malloc(sizeof(t_list));
+    if (third == NULL)
+        return (3);
+    third->content = ft_itoa((int)strlen("Salut comment ca va ?"));
+    third->next = NULL;
+    second->next = third; // maillon 2 relie le 3
+    //PARCOURIR LES MAILLONS
+    int    i;
+    i = 1;
+    explorer = head;
+    while(explorer != NULL)
+        {
+            printf("noeud num: %d -> %s\n", i, (char *)explorer ->content);
+            i++;
+            explorer = explorer->next;
+        }
+    fourth = NULL;
+    fourth = malloc(sizeof(t_list));
+    if (fourth == NULL)
+        return (4);
+    fourth->content = ft_strdup("ici mon pote");
+    ft_lstadd_back(&head, fourth);
+    map = ft_lstmap(head, )
+}
+*/
+```
+
+### pushswap/libft/ft_lstnew_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 03:33:05 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:21:38 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new_lst;
+
+	new_lst = malloc(sizeof(t_list));
+	if (!new_lst)
+		return (NULL);
+	new_lst->content = content;
+	new_lst -> next = NULL;
+	return (new_lst);
+}
+
+// int main(void)
+// {
+// 	char *content = "hello word";
+// 	t_list *manon = ft_lstnew(content);
+// 	if(!manon)
+// 	  if (manon == NULL)
+//     {
+//         printf("Erreur : la fonction ft_lstnew a retourné NULL\n");
+//         return (1);
+//     }
+//     printf("Contenu du nœud : %s\n", (char *)manon->content);
+//     if (manon->next == NULL)
+//         printf("Le champ 'next' est correctement initialisé à NULL\n");
+//     else
+//         printf("Erreur : le champ 'next' n'est pas NULL\n")
+//     // Libération de la mémoire allouée
+//     free(manon);
+// }
+```
+
+### pushswap/libft/ft_lstsize_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:21:57 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 14:09:20 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
+{
+	int	count;
+
+	count = 0;
+	while (lst)
+	{
+		count ++;
+		lst = lst->next;
+	}
+	return (count);
+}
+```
+
+### pushswap/libft/ft_malloc.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/26 00:25:33 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/19 20:03:40 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_free_list(t_list *list)
+{
+	t_list	*tmp;
+
+	while (list != NULL)
+	{
+		tmp = list;
+		free(list->content);
+		list = list->next;
+		free(tmp);
+		tmp = NULL;
+	}
+}
+
+void	*ft_malloc(size_t size)
+{
+	void			*ptr;
+	static t_list	*adr = NULL;
+
+	if (size == 0)
+	{
+		ft_free_list(adr);
+		adr = NULL;
+		return (NULL);
+	}
+	ptr = malloc(size);
+	if (!ptr)
+		return (NULL);
+	ft_memset(ptr, 0, size);
+	ft_lstadd_front(&adr, ft_lstnew(ptr));
+	return (ptr);
+}
+```
+
+### pushswap/libft/ft_memchr.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:51:45 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:22:31 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t len)
+{
+	size_t		i;
+	const char	*s1;
+
+	i = 0;
+	s1 = (const char *)s;
+	while (i < len)
+	{
+		if (s1[i] == (char)c)
+			return ((void *)&s1[i]);
+		i++;
+	}
+	return ((void *)0);
+}
+```
+
+### pushswap/libft/ft_memcmp.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:51:51 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/15 17:51:53 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
+
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		i++;
+	}
+	return (0);
+}
+```
+
+### pushswap/libft/ft_memcpy.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:21:12 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/13 16:22:25 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	char	*dest2;
+	char	*src2;
+
+	if (!dest && !src)
+		return (NULL);
+	src2 = (char *)src;
+	dest2 = (char *)dest;
+	while (n > 0)
+	{
+		*dest2 = *src2;
+		src2++;
+		dest2++;
+		n--;
+	}
+	return (dest);
+}
+```
+
+### pushswap/libft/ft_memmove.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:26:21 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/15 17:52:08 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{	
+	char	*dstc;
+	char	*srcc;
+
+	dstc = (char *)dst;
+	srcc = (char *)src;
+	if (dstc > srcc && dstc < srcc + len)
+	{
+		dstc = dstc + len;
+		srcc = srcc + len;
+		while (len--)
+			*--dstc = *--srcc;
+	}
+	else
+		ft_memcpy(dstc, srcc, len);
+	return (dst);
+}
+```
+
+### pushswap/libft/ft_memset.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:52:12 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/15 17:52:14 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		((char *)b)[i] = c;
+		i++;
+	}
+	return (b);
+}
+
+// int	main(void)
+// {
+// 	void *str[10];
+// 	int a = 65;
+// 	ft_memset(str, a, 10);
+// 	printf("%s", str);
+// }
+```
+
+### pushswap/libft/ft_putchar_fd.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:27:04 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/14 17:44:34 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+```
+
+### pushswap/libft/ft_isalnum.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:50:53 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:18:23 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
+}
+```
+
+### pushswap/libft/Makefile
+
+```
+# Variables
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror -I.
+NAME    = libft.a
+
+SRC_DIR = .
+
+# Fichiers source de libft
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isascii.c ft_isalnum.c ft_isalpha.c \
+      ft_isdigit.c ft_isprint.c ft_itoa.c ft_memcpy.c ft_memmove.c ft_memset.c \
+      ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c \
+      ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c \
+      ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c \
+      ft_substr.c ft_tolower.c ft_toupper.c ft_memchr.c ft_memcmp.c ft_realloc.c \
+      ft_malloc.c ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+      ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
+      ft_lstiter_bonus.c ft_lstmap_bonus.c ft_free.c ft_atoi_base.c
+
+# Gestion de get_next_line
+GNL_DIR = gnl
+GNL_SRC = get_next_line_bonus.c
+
+# Gestion de printf
+PRINTF_DIR = printf
+PRINTF_SRC = base.c hexa.c libft.c
+
+# Création des fichiers objets
+OBJ     = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o)) \
+          $(addprefix $(GNL_DIR)/, $(GNL_SRC:.c=.o)) \
+          $(addprefix $(PRINTF_DIR)/, $(PRINTF_SRC:.c=.o))
+
+HEADER  = libft.h $(GNL_DIR)/get_next_line_bonus.h $(PRINTF_DIR)/ft_printf.h
+
+# Couleurs
+RED     = \033[0;31m
+YELLOW  = \033[0;33m
+GREEN   = \033[0;32m
+NC      = \033[0m
+
+# Règles de compilation
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo -e "$(GREEN)Static library created: $(NAME)$(NC)"
+
+%.o: %.c $(HEADER)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+# Création de la bibliothèque dynamique
+so: $(OBJ)
+	@echo "Creating dynamic library libft.so..."
+	@$(CC) -nostartfiles -shared -o libft.so $(OBJ)
+
+libft.so: so
+
+# Mode verbose : cache l'exécution des fichiers et affiche un message global
+verbose: $(NAME)
+	@echo "$(GREEN)🔹 Compilation silencieuse de Libft...$(NC)"
+	@$(MAKE) --no-print-directory all
+
+clean:
+	@echo "$(RED)Removing object files...$(NC)"
+	@rm -rf $(OBJ)
+
+fclean: clean
+	@echo "$(RED)Removing all generated files...$(NC)"
+	@rm -f $(NAME) libft.so
+
+re: fclean all
+
+.PHONY: all clean fclean re so verbose
+```
+
+### pushswap/libft/ft_putendl_fd.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:30:05 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/14 17:45:06 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}
+```
+
+### pushswap/libft/ft_putnbr_fd.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:31:30 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/14 07:58:52 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putnbr_fd(int nb, int fd)
+{
+	long int	nbl;
+
+	nbl = nb;
+	if (nbl < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbl = nbl * -1;
+	}
+	if (nbl < 10 && nbl >= 0)
+		ft_putchar_fd(nbl + '0', fd);
+	if (nbl >= 10)
+	{
+		ft_putnbr_fd(nbl / 10, fd);
+		ft_putnbr_fd(nbl % 10, fd);
+	}
+}
+```
+
+### pushswap/libft/ft_putstr_fd.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:52:35 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 14:10:56 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
+
+	i = 0;
+	if (fd < 0 || !s)
+		return ;
+	while (s[i])
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
+}
+```
+
+### pushswap/libft/ft_realloc.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/20 18:55:08 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/19 19:54:39 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_realloc(void *old, int old_size, int new_size, int data_size)
+{
+	void	*ptr;
+
+	ptr = malloc(new_size * data_size);
+	if (!ptr)
+		return (NULL);
+	if (old)
+	{
+		if (old_size < new_size)
+			ft_memcpy(ptr, old, (old_size) * data_size);
+		else
+			ft_memcpy(ptr, old, (new_size) * data_size);
+	}
+	if (new_size > old_size)
+		ft_bzero((char *)ptr + old_size * data_size, (new_size
+				- old_size) * data_size);
+	free(old);
+	return (ptr);
+}
+```
+
+### pushswap/libft/ft_split.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:33:45 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/10 18:03:13 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	countwords(char const *s, char sep)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		while (s[i] == sep && s[i])
+			i++;
+		if (s[i] != '\0')
+		{
+			count++;
+			i++;
+		}
+		while (s[i] != sep && s[i])
+			i++;
+	}
+	return (count);
+}
+
+static void	ft_strcpyi(char *dest, const char *src, int index, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		dest[i] = src[index + i];
+		i++;
+	}
+	dest[i] = '\0';
+}
+
+static void	*ft_clear(char **res, int j)
+{
+	j--;
+	while (j >= 0)
+	{
+		free(res[j]);
+		j--;
+	}
+	free(res);
+	return (NULL);
+}
+
+static char	**addwords(char **res, const char *s, char sep)
+{
+	int	i;
+	int	j;
+	int	k;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	while (j < countwords(s, sep))
+	{
+		while (s[i] == sep && s[i])
+			i++;
+		while (s[i] != sep && s[i])
+		{
+			i++;
+			k++;
+		}
+		res[j] = ft_malloc((k + 1) * sizeof(char));
+		if (!res[j])
+			return (ft_clear(res, j));
+		ft_strcpyi(res[j], s, i - k, k);
+		k = 0;
+		j++;
+	}
+	res[j] = NULL;
+	return (res);
+}
+
+char	**ft_split(char const *s, char sep)
+{
+	char	**res;
+
+	res = ft_malloc((countwords(s, sep) + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	res = addwords(res, s, sep);
+	return (res);
+}
+```
+
+### pushswap/libft/ft_strchr.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/14 17:45:19 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 23:52:38 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strchr(const char *str, int c)
+{
+	int				i;
+	unsigned char	uc;
+
+	i = 0;
+	uc = (unsigned char)c;
+	while (str[i])
+	{
+		if (str[i] == uc)
+			return ((char *)&str[i]);
+		i++;
+	}
+	if (uc == '\0')
+		return ((char *)&str[i]);
+	return (NULL);
+}
+```
+
+### pushswap/libft/ft_strdup.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/14 17:45:31 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:30:59 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = 0;
+	return (str);
+}
+```
+
+### pushswap/libft/ft_striteri.c
+
+**Dependencies:**
+- External: `stdlib.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:38:34 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:31:29 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	i;
+
+	i = 0;
+	if (s == NULL)
+		return ;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}
+```
+
+### pushswap/libft/ft_strjoin.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:39:38 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:32:18 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	j = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		str[i + j] = s2[j];
+		j++;
+	}
+	str[i + j] = '\0';
+	return (str);
+}
+```
+
+### pushswap/libft/ft_strlcat.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:53:20 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/15 17:53:20 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	dest_size;
+	size_t	src_size;
+
+	if ((!src || !dst) && size == 0)
+		return (0);
+	i = 0;
+	dest_size = ft_strlen(dst);
+	src_size = ft_strlen(src);
+	if (dest_size >= size)
+		return (src_size + size);
+	while (src[i] != '\0' && i < (size - dest_size - 1))
+	{
+		dst[dest_size + i] = src[i];
+		i++;
+	}
+	dst[dest_size + i] = '\0';
+	return (src_size + dest_size);
+}
+```
+
+### pushswap/libft/ft_strlcpy.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:53:28 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:34:14 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcpy(char	*dest, const char	*src, size_t	size)
+{
+	size_t	len;
+	size_t	i;
+
+	i = 0;
+	len = 0;
+	while (src[len])
+		len++;
+	if (size == 0)
+		return (len);
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (len);
+}
+```
+
+### pushswap/libft/ft_strlen.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:53:36 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/15 17:53:38 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+```
+
+### pushswap/libft/ft_isalpha.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:51:01 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 11:29:16 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalpha(int c)
+{
+	if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
+		return (0);
+	return (1);
+}
+```
+
+### pushswap/libft/ft_isascii.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:51:09 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:18:44 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
+```
+
+### pushswap/libft/ft_isdigit.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:51:17 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:18:53 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+```
+
+### pushswap/libft/ft_isprint.c
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 17:51:24 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/16 22:19:05 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}
+```
+
+### pushswap/libft/ft_itoa.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/13 16:20:52 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/12/30 01:07:15 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	ft_strlena(int nb)
+{
+	int		len;
+	long	n;
+
+	len = 0;
+	n = nb;
+	if (n < 0)
+	{
+		len++;
+		n = -n;
+	}
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_itoa(int nb)
+{
+	char		*res;
+	long		n;
+	int			i;
+
+	n = nb;
+	i = ft_strlena(n);
+	res = ft_malloc((ft_strlena(n) + 1) * sizeof(char));
+	if (!res)
+		return (NULL);
+	res[i] = '\0';
+	i--;
+	if (n < 0)
+	{
+		res[0] = '-';
+		n = -n;
+	}
+	if (n == 0)
+		res[0] = '0';
+	while (n > 0)
+	{
+		res[i] = n % 10 + '0';
+		n /= 10;
+		i--;
+	}
+	return (res);
+}
+```
+
+### pushswap/libft/ft_lstadd_back_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 22:19:33 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/18 14:02:49 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*last;
+
+	if (!lst && !new)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{
+		last = *lst;
+		while (last->next != NULL)
+			last = last->next;
+		last->next = new;
+	}
+}
+```
+
+### pushswap/libft/ft_atoi_base.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/libft.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/29 18:15:16 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/19 16:33:21 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_check(char c, char *base)
+{
+	int	i;
+
+	i = 0;
+	while (base[i])
+	{
+		if (base[i] == c)
+			return (i);
+		i++;
+	}
+	return (-1);
+}
+
+void	ft_init_atoi(int *i, int *n, long *result)
+{
+	*i = 0;
+	*n = 1;
+	*result = 0;
+}
+
+int	ft_atoi_base(char *str, char *base)
+{
+	int		i;
+	int		n;
+	int		b;
+	int		base_lenght;
+	long	result;
+
+	base_lenght = ft_strlen(base);
+	ft_init_atoi(&i, &n, &result);
+	b = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			n = -1;
+		i++;
+	}
+	while (str[i] && b != -1)
+	{
+		b = ft_check(str[i], base);
+		result = result * base_lenght + b;
+		i++;
+	}
+	return (result * n);
+}
+
+// int main(int ac, char **av)
+// {
+// 	printf("%d", ft_atoi_base(av[1], av[2]));
+// }
+```
+
+### pushswap/libft/printf/base.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/printf/ft_printf.h`
+- External: `stdio.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   base.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/05 22:32:26 by ramahrez          #+#    #+#             */
+/*   Updated: 2024/11/21 16:35:01 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+#include "stdio.h"
+
+int	ft_tri(char c, va_list ap)
+{
+	if (c == 'c')
+	{
+		ft_put_point(va_arg(ap, int));
+		return (1);
+	}
+	if (c == 's')
+		return (ft_putlstr(va_arg(ap, char *)));
+	if (c == 'p')
+		return (ft_putadr(va_arg(ap, void *)));
+	if ((c == 'd') || (c == 'i'))
+		return (ft_putnbr(va_arg(ap, int)));
+	if (c == 'u')
+		return (ft_putlunbr_base(va_arg(ap, unsigned int), "0123456789"));
+	if (c == 'x')
+		return (ft_putlunbr_base(va_arg(ap, unsigned int), "0123456789abcdef"));
+	if (c == 'X')
+		return (ft_putlunbr_base(va_arg(ap, unsigned int), "0123456789ABCDEF"));
+	if (c == '%')
+	{
+		ft_putchar('%');
+		return (1);
+	}
+	return (0);
+}
+
+int	ft_printf(const char *format, ...)
+{
+	va_list	ap;
+	int		i;
+	int		len;
+
+	i = 0;
+	len = 0;
+	if (!format)
+		return (-1);
+	va_start (ap, format);
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			len += ft_tri(format[i + 1], ap);
+			i++;
+		}
+		else
+		{
+			len ++;
+			ft_putchar(format[i]);
+		}
+		i++;
+	}
+	va_end(ap);
+	return (len);
+}
+```
+
+### pushswap/libft/printf/ft_printf.h
+
+```h
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 19:33:54 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/06 15:47:16 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+# include <stdio.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include "../libft.h"
+
+// # define secur "cspdiuxX%"
+// # define BASE_DEC "0123456789"
+// # define BASE_HEX "0123456789abcdef"
+// # define BASE_HEX_UPP "0123456789ABCDEF"
+
+int		ft_putlstr(char *str);
+int		ft_put_point(char c);
+int		ft_putnbr(int nb);
+int		ft_nb(int nb, int base);
+int		ft_putadr(void *ptr);
+int		ft_putlunbr_base(unsigned int nb, char *base);
+int		ft_putchar(char c);
+int		ft_printf(const char *format, ...);
+
+void	ft_error(void);
+void	error_arg(void);
+void	ft_putstr(char *str);
+void	ft_pri(char *format, void *arg, int nb_args, int *i);
+
+#endif
+```
+
+### pushswap/libft/printf/hexa.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/printf/ft_printf.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hexa.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 19:11:23 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/02/27 18:32:44 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+int	ft_putlunbr_base(unsigned int n, char *base)
+{
+	int				len;
+	unsigned int	len_base;
+
+	if (!n)
+		return (ft_putchar('0'));
+	len_base = ft_strlen(base);
+	len = 0;
+	if (n >= len_base)
+		len += ft_putlunbr_base(n / len_base, base);
+	len += write(1, &base[n % len_base], 1);
+	return (len);
+}
+
+int	ft_putadr(void *ptr)
+{
+	char				*hex;
+	int					len;
+	unsigned long long	addr;
+
+	if (!ptr)
+		return (ft_putlstr("(nil)"));
+	addr = (unsigned long long)ptr;
+	hex = "0123456789abcdef";
+	len = 0;
+	if (addr >= 16)
+		len += ft_putadr((void *)(addr / 16));
+	if (len == 0)
+		len += ft_putlstr("0x");
+	len += write(1, &hex[addr % 16], 1);
+	return (len);
+}
+```
+
+### pushswap/libft/printf/libft.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/printf/ft_printf.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 19:18:56 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/06 15:48:28 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+int	ft_putlstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
+int	ft_put_point(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_putnbr(int nb)
+{
+	long int	n;
+	int			len;
+
+	len = 0;
+	n = nb;
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n *= -1;
+		len++;
+	}
+	if (n > 9)
+	{
+		len += ft_putnbr(n / 10);
+		len += ft_putnbr(n % 10);
+	}
+	if (n < 10)
+	{
+		len += ft_putchar(n + '0');
+	}
+	return (len);
+}
+```
+
+### pushswap/libft/gnl/get_next_line_bonus.c
+
+**Dependencies:**
+- Internal: `pushswap/libft/gnl/get_next_line_bonus.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/20 17:56:38 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/31 22:47:33 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "get_next_line_bonus.h"
+
+void	ft_strlcpy(char *src, char *dest, int l)
+{
+	int	i;
+
+	i = 0;
+	if (!src || !dest)
+		return ;
+	while (i + 1 < l && src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	if (i < l)
+	{
+		dest[i] = 0;
+	}
+}
+
+int	ft_test(t_vars *s_var)
+{
+	while (s_var->buffer[s_var->line_lenght]
+		&&s_var->buffer[s_var->line_lenght] != '\n')
+		s_var->line_lenght++;
+	if (s_var->buffer[s_var->line_lenght] == '\n')
+	{
+		s_var->line_lenght++;
+		return (0);
+	}
+	return (1);
+}
+
+int	ft_read_alloc_fd(t_vars *s_var, int fd)
+{
+	char	*temp;
+	int		a;
+
+	s_var->read_size = BUFFER_SIZE;
+	while (ft_test(s_var) && s_var->read_size == BUFFER_SIZE)
+	{
+		if (s_var->str_size + s_var->read_size >= s_var->str_buffer)
+		{
+			temp = malloc(s_var->str_buffer * 2);
+			if (!temp)
+				return (-1);
+			s_var->str_buffer *= 2;
+			ft_strlcpy(s_var->buffer, temp, s_var->str_size + 1);
+			free(s_var->buffer);
+			s_var->buffer = temp;
+		}
+		a = s_var->str_size;
+		s_var->read_size = read(fd, s_var->buffer + a, BUFFER_SIZE);
+		if (s_var->read_size < 0)
+			return (-1);
+		s_var->str_size += s_var->read_size;
+		s_var->buffer[s_var->str_size] = 0;
+	}
+	return (s_var->line_lenght);
+}
+
+void	*ft_nul(t_vars s_var, char *trace)
+{
+	ft_strlcpy("", trace, BUFFER_SIZE);
+	return (free(s_var.buffer), NULL);
+}
+
+char	*get_next_line(int fd)
+{
+	t_vars		s_var;
+	char		*ret;
+	static char	trace[FD][BUFFER_SIZE] = {0};
+
+	if ((fd < 0) || fd > FD || BUFFER_SIZE < 1)
+		return (NULL);
+	s_var.str_buffer = BUFFER_SIZE + 1;
+	s_var.buffer = malloc(s_var.str_buffer);
+	if (!s_var.buffer)
+		return (NULL);
+	s_var.str_size = 0;
+	while (trace[fd][s_var.str_size])
+		s_var.str_size++;
+	ft_strlcpy(trace[fd], s_var.buffer, s_var.str_size + 1);
+	s_var.line_lenght = 0;
+	s_var.line_lenght = ft_read_alloc_fd(&s_var, fd);
+	if (s_var.line_lenght == -1 || !s_var.buffer[0])
+		return (ft_nul(s_var, trace[fd]));
+	ret = malloc(s_var.line_lenght + 1);
+	if (!ret)
+		return (free(s_var.buffer), NULL);
+	ft_strlcpy(s_var.buffer, ret, s_var.line_lenght + 1);
+	ft_strlcpy(s_var.buffer + s_var.line_lenght, trace[fd],
+		s_var.str_size - s_var.line_lenght + 1);
+	return (free(s_var.buffer), ret);
+}
+
+//  int main(void)
+//  {
+//    int fd = open("exemple.txt", O_RDONLY);
+//    char *str;
+//    str = get_next_line(fd);
+//    while(str)
+//    {
+//      printf("%s", str);
+//      str = get_next_line(fd);
+//    }
+//    return (0);
+//  }
+
+// int main(void)
+// {
+// 	int fd = open("exemple2.txt", O_RDONLY);
+// 	char *str = get_next_line(fd);
+// 	printf("%s", str);
+// 	str = get_next_line(fd);
+// 		printf("%s", str);
+// 	str = get_next_line(fd);
+// 	printf("%s", str);
+// }
+```
+
+### pushswap/libft/gnl/get_next_line_bonus.h
+
+```h
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/20 18:09:39 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/03/31 22:47:12 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
+
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdlib.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+# ifndef FD
+#  define FD 512
+# endif
+
+typedef struct s_vars
+{
+	int		str_buffer;
+	int		str_size;
+	int		line_lenght;
+	int		read_size;
+	char	*buffer;
+}t_vars;
+
+char	*get_next_line(int fd);
+
+#endif
+```
+
+### pushswap/src/error.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/02 19:36:26 by hectordavro      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void	print_error(char *str)
+{
+	ft_free();
+	printf(RED "%s\n" RESET, str);
+	exit(0);
+}
+
+void	ft_check_signe(char **argv)
+{
+	int	i;
+	int	j;
+	int	flag;
+
+	j = 1;
+	flag = 0;
+	while (argv[j])
+	{
+		i = 0;
+		while (argv[j][i])
+		{
+			if (argv[j][i] != ' ' && flag == 0)
+			{
+				flag = 1;
+				if (argv[j][i] == '-' || argv[j][i] == '+')
+					i++;
+			}
+			if (argv[j][i] == ' ')
+				flag = 0;
+			if (flag == 1 && (argv[j][i] == '-' || argv[j][i] == '+'))
+				print_error("arg invalid");
+			i++;
+		}
+		j++;
+	}
+}
+
+void	ft_check_num(char **argv)
+{
+	int	i;
+	int	j;
+
+	j = 1;
+	i = 0;
+	while (argv[j])
+	{
+		while (argv[j][i])
+		{
+			if (!((argv[j][i] >= '0' && argv[j][i] <= '9') || argv[j][i] == ' '
+					|| argv[j][i] == '+' || argv[j][i] == '-'))
+				print_error("ERROR ARGUMENT INVALID");
+			i++;
+		}
+		i = 0;
+		j++;
+	}
+}
+
+void	ft_check_value(char **argv)
+{
+	int	i;
+	int	j;
+	int	count;
+
+	i = 0;
+	j = 1;
+	count = 0;
+	while (argv[j])
+	{
+		while (argv[j][i])
+		{
+			if (argv[j][i] >= '0' && argv[j][i] <= '9')
+				count++;
+			else
+			{
+				if (count >= 12)
+					print_error("NUMBER TOO BIG OR TOO SMALL");
+				else
+					count = 0;
+			}
+			i++;
+		}
+		i = 0;
+		j++;
+	if (count >= 12)
+		print_error("number too big or too small");
+	count = 0;
+	}
+}
+
+void	ft_check_error(char **argv)
+{
+	ft_check_num(argv);
+	ft_check_value(argv);
+	ft_check_signe(argv);
+}
+```
+
+### pushswap/src/main.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/07 15:46:26 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void	print_every_list(t_stack *stack_a, t_stack *stack_b)
+{
+	printf("stack a\n");
+	print_list(&stack_a);
+	printf("\n-----------------------------------------------------------------------------------\n");
+	printf("\n-----------------------------------------------------------------------------------\n");
+	printf("stack_b");
+	print_list(&stack_b);
+	printf("\n-----------------------------------------------------------------------------------\n");
+}
+
+void	cost_account(void)
+{
+	int	i = 0;
+
+	while (get_next_line(0))
+		i++;
+	printf("coup = %d", i);
+}
+
+int	main(int ac, char **av)
+{
+	t_stack	*stack_a;
+	t_stack	*stack_b;
+	t_var	s_var;
+
+	stack_b = NULL;
+	if (ac < 2)
+		print_error("ERROR ARGUMENT");
+	stack_a = ft_pars(av);
+	s_var.size_stack = str_list(&stack_a);
+	if (s_var.size_stack <= 1)
+		exit(0);
+	print_list(&stack_a);
+	// 	// choice_tri(&stack_a, s_var);
+	// pb(&stack_a, &stack_b);
+	// print_every_list(stack_a, stack_a);
+	// pa(&stack_a, &stack_b);
+	// print_every_list(stack_a, stack_a);
+	ft_free();
+	// cost_account();
+}
+```
+
+### pushswap/src/rota.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rota.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/05 14:10:36 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void	sa(t_stack **stack_a)
+{
+	int	temp;
+
+	if(!*stack_a || !(*stack_a)->next)
+		return ;
+	temp = (*stack_a)->content;
+	(*stack_a)->content = (*stack_a)->next->content;
+	(*stack_a)->next->content = temp;
+	ft_printf("sa\n");
+}
+
+void	sb(t_stack **stack_b)
+{
+	int	temp;
+
+	temp = (*stack_b)->content;
+	(*stack_b)->content = (*stack_b)->next->content;
+	(*stack_b)->next->content = temp;
+	ft_printf("sb\n");
+}
+
+void	ss(t_stack **stack_a, t_stack **stack_b)
+{
+	int	temp;
+
+	temp = (*stack_a)->content;
+	(*stack_a)->content = (*stack_a)->next->content;
+	(*stack_a)->next->content = temp;
+	temp = (*stack_b)->content;
+	(*stack_b)->content = (*stack_b)->next->content;
+	(*stack_b)->next->content = temp;
+	ft_printf("ss\n");
+}
+
+void	pb(t_stack **stack_a, t_stack **stack_b)
+{
+	int	n;
+
+	if (!(*stack_a))
+		return ;
+	n = (*stack_a)->content;
+	if (!*stack_b)
+		ft_create_head_node(stack_b, n);
+	else
+		ft_creat_node(stack_b, n);
+	ft_printf("pb\n");
+	ft_delone_first(stack_a);
+}
+
+void	pa(t_stack **stack_a, t_stack **stack_b)
+{
+	int	n;
+
+	if (!(*stack_b))
+		return ;
+	n = (*stack_b)->content;
+	if (!*stack_a)
+		ft_create_head_node(stack_a, n);
+	else
+		ft_creat_node(stack_a, n);
+	ft_printf("pa\n");
+	ft_delone_first(stack_b);
+}
+
+void	ra(t_stack **stack_a)
+{
+	if (!stack_a || !(*stack_a) || (*stack_a)->next == *stack_a)
+		return ;
+	*stack_a = (*stack_a)->next;
+
+	ft_printf("ra\n");
+}
+
+void	rb(t_stack **stack_b)
+{
+	if (!stack_b || !(*stack_b) || (*stack_b)->next == *stack_b)
+		return ;
+	*stack_b = (*stack_b)->next;
+
+	ft_printf("rb\n");
+}
+
+void rra(t_stack **stack_a)
+{
+	if (!stack_a || !(*stack_a) || (*stack_a)->next == *stack_a)
+		return ;
+	*stack_a = (*stack_a)->prev;
+
+	ft_printf("rra\n");
+}
+
+void rrb(t_stack **stack_b)
+{
+		if (!stack_b || !(*stack_b) || (*stack_b)->next == *stack_b)
+		return ;
+	*stack_b = (*stack_b)->prev;
+
+	ft_printf("rrb\n");
+}
+```
+
+### pushswap/src/small.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+#include "../includes/push_swap.h"
+
+void tri_2(t_stack **stack_a)
+{
+	int	num_1;
+	int	num_2;
+
+	num_1 = (*stack_a)->content;
+	num_2 = (*stack_a)->next->content;
+	if(num_1 > num_2)
+		sa(stack_a);
+}
+
+void	tri_3_croissant(t_stack **stack_a)
+{
+	int	num_1;
+	int	num_2;
+	int	num_3;
+
+	num_1 = (*stack_a)->content;
+	num_2 = (*stack_a)->next->content;
+	num_3 = (*stack_a)->prev->content;
+	if (num_1 > num_2 && num_1 > num_3 && num_2 < num_3)
+		ra(stack_a);
+	if (num_1 > num_2 && num_1 > num_3 && num_2 > num_3)
+	{
+		ra(stack_a);
+		sa(stack_a);
+	}
+	if (num_1 > num_2 && num_1 < num_3 && num_2 < num_3)
+		sa(stack_a);
+	if( num_1 < num_2 && num_1 > num_3 && num_2 > num_3)
+	{
+		ra(stack_a);
+		ra(stack_a);
+	}
+	if (num_1 < num_2 && num_1 < num_3 && num_2 > num_3)
+	{
+		sa(stack_a);
+		ra(stack_a);
+	}
+}
+
+void tri_5(t_stack **stack_a, t_stack *stack_b, t_var *s_var)
+{
+	int i = 0;
+
+	while(i < 2)
+	{
+		init_position_value(stack_a, s_var);
+		if (s_var->min_position == 1)
+			pb(stack_a, &stack_b);
+
+		else if (s_var->min_position == 2)
+		{
+			sa(stack_a);
+			pb(stack_a, &stack_b);
+		}
+		else if (s_var->min_position == 3)
+		{
+			sa(stack_a);
+			sa(stack_a);
+			pb(stack_a, &stack_b);
+		}
+		else if (s_var->min_position == 4)
+		{
+			rra(stack_a);
+			rra(stack_a);
+			pb(stack_a, &stack_b);
+		}
+		else if (s_var->min_position == 5)
+		{
+			rra(stack_a);
+			pb(stack_a, &stack_b);
+		}
+		i++;
+	}
+	// tri_3(stack_a);
+	pa(stack_a, &stack_b);
+	pa(stack_a, &stack_b);
+}
+
+void choice_tri(t_stack **stack_a, t_var s_var)
+{
+	s_var.size_stack = str_list(stack_a); 
+	if (s_var.size_stack == 2)
+		tri_2(stack_a);
+	if(s_var.size_stack == 3)
+	{
+		tri_3_croissant(stack_a);
+		print_list(stack_a);
+	}
+	else
+	{
+		tri_list(stack_a, s_var);
+	}
+}
+```
+
+### pushswap/src/utils_pile.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_pile.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/02 15:56:02 by hectordavro       #+#    #+#             */
+/*   Updated: 2025/04/02 16:18:44 by hectordavro      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+int ft_check_double(t_stack **stack, int n)
+{
+    t_stack *current;
+
+    if(!*stack || !(*stack)->next)
+        return (0);
+    current = *stack;
+    while(1)
+    {
+        if(n == current->content)
+            return (1);
+        current = current->next;
+        if(current == *stack)
+            break ;
+    }
+    return (0);
+}
+```
+
+### pushswap/src/value.c
+
+```c
+
+```
+
+### pushswap/src/algo.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algo.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/05 14:08:10 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void move_to_top(t_stack **stack, int index)
+{
+	int	i;
+
+	i = 0;
+	while (i < index)
+	{
+		ra(stack);
+		i++;
+	}
+}
+
+
+void	tri_list(t_stack **stack_a, t_var s_var)
+{
+	// t_stack *current;
+	t_stack *stack_b;
+	// int i;
+	// int j;
+
+	stack_b = NULL;
+	// i = 0;
+	if (!(*stack_a) || !(*stack_a)->next)
+		return ;
+	s_var.size_stack = str_list(stack_a);
+	// current = *stack_a;
+	while (1)
+	{
+		ft_init(stack_a, &s_var);
+		if( s_var.size_stack == 3)
+		{
+			tri_3_croissant(stack_a);
+			break ;
+		}
+		move_to_top(stack_a, s_var.min_position);
+		pb(stack_a, &stack_b);
+		printf("satck b = =>");
+		print_list(&stack_b);
+	}
+	while(stack_b)
+		pa(stack_a, &stack_b);
+	print_every_list(*stack_a, stack_b);
+}
+```
+
+### pushswap/src/init.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/04 16:38:02 by hectordavro       #+#    #+#             */
+/*   Updated: 2025/04/04 20:21:59 by hectordavro      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void	init_position_value(t_stack **stack, t_var *s_var)
+{
+	t_stack *curent;
+	int 	i;
+
+	i = 2;
+	s_var->max_value = (*stack)->content;
+	s_var->min_value = (*stack)->content;
+	s_var->max_position = 1;
+	s_var->min_position = 1;
+	curent = *stack;
+	while (1)
+	{
+		curent = curent->next;
+		if (curent == *stack || !curent)
+			  break ;
+		if (s_var->max_value <= curent->content)
+		{
+			s_var->max_value = curent->content;
+			s_var->max_position = i;
+		}
+		if (s_var->min_value >= curent->content)
+		{
+			s_var->min_value = curent->content;
+			s_var->min_position = i;
+		}
+		i++;
+	}
+}
+
+
+int ft_nombre_significatif(int nbr, int place)
+{
+	char *str;
+	int size;
+	int temp;
+	str =ft_itoa(nbr);
+	if(!str)
+		print_error(RED "ERROR ALLOCATION" RESET);
+	size = ft_strlen(str);
+
+	if(nbr < 0)
+	{
+		// size--;
+		if(place > size)
+			return(0);
+		temp = str[size - place] -'0';
+		return(temp * -1);
+	}
+	else
+	{
+		if(place > size)
+			return(0);
+		temp = str[size - place] -'0';
+		return(temp);
+	}
+}
+
+void init_index(t_stack **stack)
+{
+    int index = 0;
+    t_stack *current;
+
+    current = *stack;
+    while(1)
+    {
+        printf("ok");
+        current->index = index;
+        current = current->next;
+        if(current == (*stack))
+            break ;
+        index++;
+    } 
+}
+
+
+void ft_init(t_stack **stack, t_var *s_var)
+{
+    init_position_value(stack, s_var);
+    s_var->size_stack = str_list(stack);
+}
+```
+
+### pushswap/src/parsing.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/07 15:50:08 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void	ft_attribute(int n, t_stack **stack)
+{
+	if (!(n >= INT_MIN && n <= INT_MAX))
+		print_error("NUMBER TOO BIG OR TOO SMALL");
+	if(ft_check_double(stack, n))
+		print_error("SAME VALUE");
+	if (!*stack)
+		ft_create_head_node(stack, n);
+	else
+		ft_creat_node(stack, n);
+}
+
+void	ft_pars_line(char **argv, t_stack **stack_a)
+{
+	int	i;
+	int	j;
+
+	j = 1;
+	i = 0;
+	(void)stack_a;
+	while (argv[j])
+	{
+		while (argv[j][i])
+		{
+			while (argv[j][i] == ' ' && argv[j][i])
+				i++;
+			if (argv[j][i])
+				ft_attribute(ft_atoi(argv[j] + i), stack_a);
+			while ((argv[j][i] >= '0' && argv[j][i] <= '9')
+				|| (argv[j][i] == '+' || argv[j][i] == '-'))
+				i++;
+		}
+		i = 0;
+		j++;
+	}
+
+}
+
+t_stack	*ft_pars(char **argv)
+{
+	t_stack *stack_a;
+	stack_a = NULL;
+	ft_check_error(argv);
+	ft_pars_line(argv, &stack_a);
+	// init_index(&stack_a);
+	return (stack_a);
+}
+```
+
+### pushswap/src/piles.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   piles.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/07 17:49:02 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+int	str_list(t_stack **stack_a)
+{
+	size_t	size;
+	t_stack	*current;
+
+	if (!*stack_a)
+		return (0);
+	current = *stack_a;
+	size = 1;
+	while (1)
+	{
+		current = current->next;
+		if (current == *stack_a)
+			break ;
+		size++;
+	}
+	return (size);
+}
+
+void	print_list(t_stack **stack_a)
+{
+	t_stack	*current;
+
+	current = *stack_a;
+	if (*stack_a == NULL)
+		return ;
+	while (1)
+	{
+		printf("nombre = |%ld|\n", current->content);
+		// printf("index = |%d|\n", current->index);
+		current = current->next;
+		if (current == *stack_a || !current)
+			break ;
+	}
+}
+
+void	ft_creat_node(t_stack **stack, int n)
+{
+	t_stack	*new;
+	t_stack	*last;
+
+	if (!stack || !*stack)
+		return ;
+	new = ft_malloc(sizeof(t_stack));
+	if (!new)
+		return ;
+	new->content = n;
+	new->next = *stack;
+	new->prev = (*stack)->prev;
+	last = (*stack)->prev;
+	last->next = new;
+	(*stack)->prev = new;
+	*stack = new; // mettre à jour la tête
+}
+
+void	ft_create_head_node(t_stack **stack_a, int n)
+{
+	*stack_a = ft_malloc(sizeof(t_stack));
+	if (!*stack_a)
+		print_error(RED "erreur" RESET);
+	(*stack_a)->content = n;
+	(*stack_a)->prev = *stack_a;
+	(*stack_a)->next = *stack_a;
+}
+
+void	ft_add_to_front(t_stack **stack, int n)
+{
+	t_stack	*new;
+	t_stack	*last;
+
+	new = ft_creat_node(&new, n);
+	if (!new)
+		return ;
+	if (!*stack)
+	{
+		*stack = new;
+		return ;
+	}
+	last = (*stack)->prev;
+	new->next = *stack;
+	new->prev = last;
+	last->next = new;
+	(*stack)->prev = new;
+	*stack = new;
+}
+
+t_stack	*ft_stacknew(int content)
+{
+	t_stack	*new_stack;
+
+	new_stack = ft_malloc(sizeof(t_stack));
+	if (!new_stack)
+		return (NULL);
+	new_stack->content = content;
+	new_stack->next = NULL;
+	return (new_stack);
+}
+
+void	ft_delone_first(t_stack **stack)
+{
+	t_stack *first;
+	t_stack *last;
+
+	if (!stack || !(*stack))
+		return ;
+	first = *stack;
+	if (first->next == *stack)
+	{
+		// free(first);
+		*stack = NULL;
+		return ;
+	}
+	last = first->prev;
+	*stack = first->next;
+
+	last->next = *stack;
+	(*stack)->prev = last;
+}
+```
+
+### pushswap/src/utils.c
+
+**Dependencies:**
+- Internal: `pushswap/includes/push_swap.h`
+
+```c
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/04 16:39:57 by hectordavro      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <../includes/push_swap.h>
+
+int verif_tri_c(t_stack **stack)
+{
+	t_stack *current;
+
+	if(!*stack || !(*stack)->next)
+		return 0;
+	current = *stack;
+	while(1)
+	{
+		if(current->content > current->next->content)
+		{
+			ft_printf("pas trier\n");
+			return (1);
+		}
+		current = current->next;
+		if(current->next == *stack)
+		{
+			ft_printf("trier\n");
+			return (0);
+		}
+	}
+}
+
+int verif_tri_d(t_stack **stack)
+{
+	t_stack *current;
+
+	if(!*stack || !(*stack)->next)
+		return 0;
+	current = *stack;
+	while(1)
+	{
+		if(current->content < current->next->content)
+			return (1);
+		current = current->next;
+		if(current == *stack)
+		{
+			ft_printf("bien trier");
+			return (0);
+		}
+	}
+}
+
+
+```
+
+### pushswap/includes/push_swap.h
+
+```h
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
+/*   Updated: 2025/04/05 16:39:53 by ramahrez         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include "../libft/libft.h"
+# include <limits.h>
+# include <stdlib.h>
+
+typedef struct s_stack
+{
+	int				index;
+	long			content;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+
+}					t_stack;
+
+typedef struct s_var
+{
+	int				size_stack;
+	int				max_value;
+	int				min_value;
+	int				max_position;
+	int				min_position;
+
+}					t_var;
+
+void				print_error(char *str);
+void				ft_check_error(char **argv);
+t_stack				*ft_pars(char **argv);
+t_stack				*ft_stacknew(int content);
+void				ft_stackadd_front(t_stack **lst, t_stack *new);
+int					ft_check_double(t_stack **stack, int n);
+
+// liste chainee;
+
+void				print_every_list(t_stack *stack_a, t_stack *stack_b);
+void				ft_create_head_node(t_stack **stack_a, int n);
+void				ft_creat_node(t_stack **stack, int n);
+void				print_list(t_stack **stack_a);
+int					str_list(t_stack **stack_a);
+void				ft_delone_first(t_stack **stack);
+void				init_index(t_stack **stack);
+void				ft_add_to_front(t_stack **stack, int n);
+// rotaion
+
+void				sa(t_stack **stack_a);
+void				sb(t_stack **stack_b);
+void				pb(t_stack **stack_a, t_stack **stack_b);
+void				pa(t_stack **stack_a, t_stack **stack_b);
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
+
+// tri
+int					verif_tri_c(t_stack **stack);
+int					verif_tri_d(t_stack **stack);
+void				choice_tri(t_stack **stack_a, t_var s_var);
+void				init_position_value(t_stack **stack, t_var *s_var);
+int					ft_nombre_significatif(int nbr, int place);
+void				tri_list(t_stack **stack_a, t_var s_var);
+void				tri_3_croissant(t_stack **stack_a);
+
+// utils
+void				ft_init(t_stack **stack, t_var *s_var);
+#endif
+```
+

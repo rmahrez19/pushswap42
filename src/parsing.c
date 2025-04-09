@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/05 16:40:23 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:50:08 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_attribute(int n, t_stack **stack)
 	if (!*stack)
 		ft_create_head_node(stack, n);
 	else
-		ft_add_to_front(stack, n);
+		ft_creat_node(stack, n);
 }
 
 void	ft_pars_line(char **argv, t_stack **stack_a)
