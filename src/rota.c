@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/09 16:44:53 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:18:29 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,14 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 {
 	int	n;
 
-	if (!(*stack_a))
+	if (!*stack_a)
 		return ;
 	n = (*stack_a)->content;
-	if (!*stack_b)
-		ft_create_head_node(stack_b, n);
-	else
-		ft_add_to_front(stack_b, n);
+	// if (!*stack_b)
+	// 	ft_create_head_node(stack_b, n);
+	ft_add_to_front(stack_b, n);
 	ft_printf("pb\n");
+	ft_printf("head_node of stack_b == %d\n", (*stack_b)->content);
 	ft_delone_first(stack_a);
 }
 

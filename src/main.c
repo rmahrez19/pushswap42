@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/09 16:45:31 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:24:07 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,11 @@ int	main(int ac, char **av)
 	print_list(&stack_a);
 	// 	// choice_tri(&stack_a, s_var);
 	pb(&stack_a, &stack_b);
-	print_every_list(stack_a, stack_a);
+	pb(&stack_a, &stack_b);
+	print_every_list(stack_a, stack_b);
+	pa(&stack_a, &stack_b);
+	pa(&stack_a, &stack_b);
+	print_every_list(stack_a, stack_b);
 	// pa(&stack_a, &stack_b);
 	// print_every_list(stack_a, stack_a);
 	ft_free();
