@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/05 14:10:36 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:44:53 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	if (!*stack_b)
 		ft_create_head_node(stack_b, n);
 	else
-		ft_creat_node(stack_b, n);
+		ft_add_to_front(stack_b, n);
 	ft_printf("pb\n");
 	ft_delone_first(stack_a);
 }
@@ -72,7 +72,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 	if (!*stack_a)
 		ft_create_head_node(stack_a, n);
 	else
-		ft_creat_node(stack_a, n);
+		ft_add_to_front(stack_a, n);
 	ft_printf("pa\n");
 	ft_delone_first(stack_b);
 }

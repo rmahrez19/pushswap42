@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/09 16:39:56 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:50:44 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void    ft_creat_node(t_stack **stack_a, int n)
     t_stack    *prev;
     t_stack    *new;
 
-    if (!stack_a || !stack_a)
-        return ;
+    if (!stack_a || !(*stack_a))
+        return ; // protection ajoutée ici
     prev = (*stack_a)->prev;
     new = ft_malloc(sizeof(t_stack));
     if (!new)
@@ -81,11 +81,14 @@ void	ft_add_to_front(t_stack **stack, int n)
 	t_stack	*new;
 	t_stack	*last;
 
-	ft_creat_node(&new, n);
+	new = ft_malloc(sizeof(t_stack));
 	if (!new)
 		return ;
+	new->content = n;
 	if (!*stack)
 	{
+		new->next = new;
+		new->prev = new;
 		*stack = new;
 		return ;
 	}

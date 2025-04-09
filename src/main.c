@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/07 15:46:26 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/09 16:45:31 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	print_every_list(t_stack *stack_a, t_stack *stack_b)
 	print_list(&stack_a);
 	printf("\n-----------------------------------------------------------------------------------\n");
 	printf("\n-----------------------------------------------------------------------------------\n");
-	printf("stack_b");
+	printf("stack_b\n");
 	print_list(&stack_b);
 	printf("\n-----------------------------------------------------------------------------------\n");
 }
@@ -47,8 +47,8 @@ int	main(int ac, char **av)
 		exit(0);
 	print_list(&stack_a);
 	// 	// choice_tri(&stack_a, s_var);
-	// pb(&stack_a, &stack_b);
-	// print_every_list(stack_a, stack_a);
+	pb(&stack_a, &stack_b);
+	print_every_list(stack_a, stack_a);
 	// pa(&stack_a, &stack_b);
 	// print_every_list(stack_a, stack_a);
 	ft_free();
