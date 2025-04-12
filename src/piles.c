@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/09 17:23:06 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/12 16:36:49 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	print_list(t_stack **stack_a)
 	while (1)
 	{
 		printf("nombre = |%ld|\n", current->content);
-		// printf("index = |%d|\n", current->index);
+		printf("index = |%d|\n", current->index);
 		current = current->next;
 		if (current == *stack_a || !current)
 			break ;

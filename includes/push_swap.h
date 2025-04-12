@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/05 16:39:53 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/12 16:37:17 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void				init_position_value(t_stack **stack, t_var *s_var);
 int					ft_nombre_significatif(int nbr, int place);
 void				tri_list(t_stack **stack_a, t_var s_var);
 void				tri_3_croissant(t_stack **stack_a);
+void	ft_assign_index(t_stack **stack);
 
 // utils
 void				ft_init(t_stack **stack, t_var *s_var);
