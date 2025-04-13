@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/12 16:38:29 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/13 18:10:15 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,15 @@ void	cost_account(void)
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b;
 	t_var	s_var;
 
-	stack_b = NULL;
 	if (ac < 2)
 		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	s_var.size_stack = str_list(&stack_a);
 	ft_assign_index(&stack_a);
-	print_list(&stack_a);
-	// if (s_var.size_stack <= 1)
-	// 	exit(0);
-	// choice_tri(&stack_a, s_var);
-	// // pa(&stack_a, &stack_b);
-	// // print_every_list(stack_a, stack_a);
-	// ft_free();
-	// // cost_account();
+	if (s_var.size_stack <= 1)
+		exit(0);
+	choice_tri(&stack_a, s_var);
+	ft_free();
 }

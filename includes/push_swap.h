@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/12 16:37:17 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/13 18:24:03 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_var
 	int				min_value;
 	int				max_position;
 	int				min_position;
+	int chunk_count;
 
 }					t_var;
 
@@ -53,6 +54,7 @@ int					str_list(t_stack **stack_a);
 void				ft_delone_first(t_stack **stack);
 void				init_index(t_stack **stack);
 void				ft_add_to_front(t_stack **stack, int n);
+void	ft_add_to_back(t_stack **stack, t_stack *new_node);
 // rotaion
 
 void				sa(t_stack **stack_a);

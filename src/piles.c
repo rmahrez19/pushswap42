@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   piles.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/12 16:36:49 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/13 17:50:01 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,4 +131,26 @@ void	ft_delone_first(t_stack **stack)
 
 	last->next = *stack;
 	(*stack)->prev = last;
+}
+
+void	ft_add_to_back(t_stack **stack, t_stack *new_node)
+{
+	t_stack	*last;
+
+	if (!new_node)
+		return ;
+	if (!*stack)
+	{
+		*stack = new_node;
+		new_node->next = new_node;
+		new_node->prev = new_node;
+	}
+	else
+	{
+		last = (*stack)->prev;
+		last->next = new_node;
+		new_node->prev = last;
+		new_node->next = *stack;
+		(*stack)->prev = new_node;
+	}
 }

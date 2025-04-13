@@ -82,7 +82,7 @@ void tri_5(t_stack **stack_a, t_stack *stack_b, t_var *s_var)
 
 void choice_tri(t_stack **stack_a, t_var s_var)
 {
-	s_var.size_stack = str_list(stack_a); 
+	s_var.size_stack = str_list(stack_a);
 	if (s_var.size_stack == 2)
 		tri_2(stack_a);
 	if(s_var.size_stack == 3)
