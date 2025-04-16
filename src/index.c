@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 18:07:51 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/13 18:08:28 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/16 18:29:05 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,4 +102,25 @@ void	ft_assign_index(t_stack **stack)
 		if (temp == *stack)
 			break;
 	}
+}
+
+
+int	find_max_index(t_stack *stack)
+{
+	t_stack	*current;
+	int		max;
+
+	if (!stack)
+		return (-1);
+	current = stack;
+	max = current->index;
+	while (1)
+	{
+		if (current->index > max)
+			max = current->index;
+		current = current->next;
+		if (current == stack)
+			break ;
+	}
+	return (max);
 }

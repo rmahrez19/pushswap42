@@ -1,7 +1,7 @@
  # Variables
 CC          = cc
 CFLAGS      = -Wall -Wextra -Werror -g
-NAME        = pushwap
+NAME        = push_swap
 LIBFT_DIR   = libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 SRC_DIR     = src

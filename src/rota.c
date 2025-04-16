@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 15:43:22 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/09 17:18:29 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:17:51 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,32 +49,42 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	int	n;
+    int n;
+    int index;
 
-	if (!*stack_a)
-		return ;
-	n = (*stack_a)->content;
-	// if (!*stack_b)
-	// 	ft_create_head_node(stack_b, n);
-	ft_add_to_front(stack_b, n);
-	ft_printf("pb\n");
-	ft_printf("head_node of stack_b == %d\n", (*stack_b)->content);
-	ft_delone_first(stack_a);
+    if (!*stack_a)
+        return ;
+
+    n = (*stack_a)->content;
+    index = (*stack_a)->index;  // Ajoute ceci pour récupérer l'index
+
+    ft_add_to_front(stack_b, n);
+    (*stack_b)->index = index;  // Assure-toi d'ajouter l'index ici
+
+    ft_printf("pb\n");
+    ft_delone_first(stack_a);
 }
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	int	n;
+	int n;
+    int index;
 
-	if (!(*stack_b))
-		return ;
-	n = (*stack_b)->content;
-	if (!*stack_a)
-		ft_create_head_node(stack_a, n);
-	else
-		ft_add_to_front(stack_a, n);
-	ft_printf("pa\n");
-	ft_delone_first(stack_b);
+    if (!(*stack_b))
+        return ;
+
+    n = (*stack_b)->content;
+    index = (*stack_b)->index;  // Récupère l'index
+
+    if (!*stack_a)
+        ft_create_head_node(stack_a, n);
+    else
+        ft_add_to_front(stack_a, n);
+
+    (*stack_a)->index = index;  // Assure-toi d'ajouter l'index ici
+
+    ft_printf("pa\n");
+    ft_delone_first(stack_b);
 }
 
 void	ra(t_stack **stack_a)

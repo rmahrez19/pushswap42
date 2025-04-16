@@ -3,55 +3,134 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/13 18:51:55 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/16 18:38:19 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void move_to_top(t_stack **stack, int index, t_var s_var)
-{
-	t_stack *current;
-	int steps;
+// int	has_index_in_range(t_stack *stack, t_var s_var)
+// {
+// 	t_stack	*current;
 
-	if(*stack == NULL)
-		return ;
-	current = *stack;
-	s_var.size_stack = str_list(stack);
-	current = *stack;
-	steps = 0;
-	while (current && current->index != index)
+// 	if (!stack)
+// 		return (0);
+// 	current = stack;
+// 	while (1)
+// 	{
+// 		if (current->index >= s_var.start && current->index <= s_var.end)
+// 			return (1);
+// 		current = current->next;
+// 		if (current == stack)
+// 			break ;
+// 	}
+// 	return (0);
+// }
+
+int has_index_in_range(t_stack *stack, t_var s_var)
+{
+    t_stack *current;
+
+    if (!stack)
+        return (0);
+
+    current = stack;
+    while (current != NULL)
+    {
+        if (current->index >= s_var.start && current->index <= s_var.end)
+            return (1);
+
+        current = current->next;
+
+        // Condition de fin pour la liste circulaire
+        if (current == stack)
+            break;
+    }
+
+    return (0);
+}
+
+
+int	find_index_in_range(t_stack *stack, t_var s_var)
+{
+	t_stack	*current;
+
+	if (!stack)
+		return (-1);
+	current = stack;
+	while (1)
 	{
-		steps++;
+		if (current->index >= s_var.start && current->index <= s_var.end)
+			return (current->index);
 		current = current->next;
+		if (current == stack)
+			break ;
 	}
-	if(steps == 0)
-		return ;
-	if (steps > s_var.size_stack / 2)
+	return (-1);
+}
+
+void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
+{
+	int	target_index;
+
+	while (has_index_in_range(*a, s_var))
 	{
-		while(steps < s_var.size_stack)
-		{
-			rra(stack);
-			steps++;
-		}
+		target_index = find_index_in_range(*a, s_var);
+		if (target_index == -1)
+			break ;
+		move_to_top(a, target_index, s_var);
+		pb(a, b);
 	}
-	else
+}
+
+void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
+{
+	int	chunk_size;
+	int	start;
+	int	end;
+	int	i;
+
+	chunk_size = s_var->size_stack / s_var->chunk_count;
+	start = 0;
+	end = chunk_size - 1;
+	i = 0;
+	while (i < s_var->chunk_count)
 	{
-		while (steps > 0)
-		{
-			ra(stack);
-			steps--;
-		}
+		s_var->start = start;
+		s_var->end = end;
+		push_chunk_to_b(a, b, *s_var);
+		start = end + 1;
+		end = start + chunk_size - 1;
+		// Si c’est l’avant-dernier chunk,
+		// le dernier prendra tout ce qu’il reste
+		if (i == s_var->chunk_count - 2)
+			end = s_var->size_stack - 1;
+		i++;
+	}
+}
+
+void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var)
+{
+	int	max_index;
+
+	while (*b)
+	{
+		max_index = find_max_index(*b);
+		move_to_top(b, max_index, s_var);
+		pa(a, b);
 	}
 }
 
 
 void	tri_list(t_stack **stack_a, t_var s_var)
 {
-	t_stack *stack_b;
+	t_stack	*stack_b;
 
-	
+	stack_b = NULL;
+	sort_with_chunks(stack_a, &stack_b, &s_var);
+	push_back_to_a(stack_a, &stack_b, s_var);
+	// print_list(stack_a);
 }

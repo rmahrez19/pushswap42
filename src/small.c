@@ -88,11 +88,11 @@ void choice_tri(t_stack **stack_a, t_var s_var)
 	if(s_var.size_stack == 3)
 	{
 		tri_3_croissant(stack_a);
-		print_list(stack_a);
+		// print_list(stack_a);
 	}
 	else
 	{
-		
+
 		tri_list(stack_a, s_var);
 	}
 }
