@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/04 16:39:57 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/15 12:42:08 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,7 @@ int verif_tri_d(t_stack **stack)
 }
 
 
+void chunk_count(t_var *s_var)
+{
+	s_var->size_stack = c
+}

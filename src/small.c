@@ -92,6 +92,7 @@ void choice_tri(t_stack **stack_a, t_var s_var)
 	}
 	else
 	{
+		
 		tri_list(stack_a, s_var);
 	}
 }
