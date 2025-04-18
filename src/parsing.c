@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/07 15:50:08 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:35:39 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ t_stack	*ft_pars(char **argv)
 	stack_a = NULL;
 	ft_check_error(argv);
 	ft_pars_line(argv, &stack_a);
-	// init_index(&stack_a);
+	ft_assign_index(&stack_a);
 	return (stack_a);
 }

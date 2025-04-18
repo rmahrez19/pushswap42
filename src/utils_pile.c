@@ -3,16 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   utils_pile.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 15:56:02 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/13 18:07:04 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/18 14:00:29 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 
+void	ft_delone_last(t_stack **stack)
+{
+	t_stack *last;
+
+	if (!stack || !(*stack))
+		return ;
+	last = (*stack)->prev;
+	if (last == *stack)
+	{
+		*stack = NULL;
+		return ;
+	}
+	last->prev->next = *stack;
+	(*stack)->prev = last->prev;
+}
 
 
 

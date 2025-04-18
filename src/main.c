@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/16 18:41:11 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:50:02 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,19 @@ void	print_every_list(t_stack *stack_a, t_stack *stack_b)
 	print_list(&stack_b);
 	printf("\n-----------------------------------------------------------------------------------\n");
 }
+
+#include <fcntl.h>
+
+void log_move(const char *move)
+{
+    int fd = open("moves.log", O_WRONLY | O_CREAT | O_APPEND, 0644);
+    if (fd < 0)
+        return ;
+    write(fd, move, ft_strlen(move));
+    write(fd, "\n", 1);
+    close(fd);
+}
+
 
 void	cost_account(void)
 {
@@ -42,7 +55,6 @@ int	main(int ac, char **av)
 		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	s_var.size_stack = str_list(&stack_a);
-	ft_assign_index(&stack_a);
 	// print_list(&stack_a);
 	chunk_count(&s_var, stack_a);
 	if (s_var.size_stack <= 1)

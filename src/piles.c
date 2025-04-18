@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   piles.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/13 17:50:01 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/18 14:09:01 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	print_list(t_stack **stack_a)
 	while (1)
 	{
 		printf("nombre = |%ld|\n", current->content);
-		printf("index = |%d|\n", current->index);
+	//	printf("index = |%d|\n", current->index);
 		current = current->next;
 		if (current == *stack_a || !current)
 			break ;

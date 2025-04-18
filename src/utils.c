@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/16 18:27:12 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:24:42 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,33 +71,41 @@ void	move_to_top(t_stack **stack, int index, t_var s_var)
 {
 	t_stack	*current;
 	int		steps;
+	int		size;
 
-	if (!*stack)
+	(void)s_var;
+	if (!stack || !(*stack) || (*stack)->next == *stack)
 		return ;
-	s_var.size_stack = str_list(stack);
+
+	size = str_list(stack);
+	if (size <= 1)
+		return ;
+
 	current = *stack;
 	steps = 0;
-	while (current && current->index != index)
+	while (current->index != index && current->next && current->next != *stack)
 	{
 		steps++;
 		current = current->next;
 	}
-	if (steps == 0)
+
+	// Si l'index est introuvable
+	if (current->index != index)
 		return ;
-	if (steps > s_var.size_stack / 2)
+
+	if (steps == 0)
+		return ; // Déjà en haut
+
+	// Choix entre ra et rra
+	if (steps <= size / 2)
 	{
-		while (steps < s_var.size_stack)
-		{
-			rra(stack);
-			steps++;
-		}
+		while (steps-- > 0)
+			ra(stack);
 	}
 	else
 	{
-		while (steps > 0)
-		{
-			ra(stack);
-			steps--;
-		}
+		steps = size - steps;
+		while (steps-- > 0)
+			rra(stack);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/16 18:29:24 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:51:22 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void				ft_delone_first(t_stack **stack);
 void				init_index(t_stack **stack);
 void				ft_add_to_front(t_stack **stack, int n);
 void	ft_add_to_back(t_stack **stack, t_stack *new_node);
+void	ft_delone_last(t_stack **stack);
 // rotaion
 
 void				sa(t_stack **stack_a);
@@ -85,4 +86,5 @@ int find_max_index(t_stack *stack);
 void	move_to_top(t_stack **stack, int index, t_var s_var);
 int	find_max_index(t_stack *stack);
 
+void log_move(const char *move);
 #endif
