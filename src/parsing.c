@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/18 15:35:39 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:00:53 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_attribute(int n, t_stack **stack)
 {
 	if (!(n >= INT_MIN && n <= INT_MAX))
 		print_error("NUMBER TOO BIG OR TOO SMALL");
-	if(ft_check_double(stack, n))
+	if (ft_check_double(stack, n))
 		print_error("SAME VALUE");
 	if (!*stack)
 		ft_create_head_node(stack, n);
@@ -47,7 +47,6 @@ void	ft_pars_line(char **argv, t_stack **stack_a)
 		i = 0;
 		j++;
 	}
-
 }
 
 t_stack	*ft_pars(char **argv)

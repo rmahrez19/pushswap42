@@ -1,21 +1,32 @@
- # Variables
+# **************************************************************************** #
+#                                  VARIABLES                                   #
+# **************************************************************************** #
+
 CC          = cc
 CFLAGS      = -Wall -Wextra -Werror -g
 NAME        = push_swap
-LIBFT_DIR   = libft
-LIBFT       = $(LIBFT_DIR)/libft.a
+
 SRC_DIR     = src
 OBJ_DIR     = obj
 INC_DIR     = includes
+LIBFT_DIR   = libft
+LIBFT       = $(LIBFT_DIR)/libft.a
+
+# Commande pour créer un dossier
 MKDIR       = mkdir -p
 
-# Recherche des fichiers sources automatiquement dans SRC_DIR
+# Recherche les fichiers sources automatiquement dans SRC_DIR
 VPATH       = $(SRC_DIR)
 
-# Définition des fichiers sources (sans besoin de préfixer par SRC_DIR)
-SRCS        = main.c parsing.c piles.c error.c rota.c small.c utils.c algo.c utils_pile.c init.c index.c
-# Fichiers objets
+# Liste des fichiers sources (chemins relatifs à SRC_DIR)
+SRCS        = main.c parsing.c piles.c error.c rota/rota.c  rota/swap.c rota/push.c small.c utils.c algo.c utils_pile.c init.c index.c
+
+# Création des objets dans obj/ en gardant la structure des sous-dossiers
 OBJS        = $(SRCS:%.c=$(OBJ_DIR)/%.o)
+
+# **************************************************************************** #
+#                                   RULES                                      #
+# **************************************************************************** #
 
 # Règle par défaut
 all: $(NAME)
@@ -24,27 +35,24 @@ all: $(NAME)
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT)
 
-# Compilation des fichiers .c en .o
-$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+# Compilation des fichiers .c en .o, avec création auto des sous-dossiers dans obj/
+$(OBJ_DIR)/%.o: %.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
-
-# Création du dossier obj s'il n'existe pas
-$(OBJ_DIR):
-	$(MKDIR) $(OBJ_DIR)
 
 # Compilation de la libft
 $(LIBFT):
-	make -C $(LIBFT_DIR)
+	$(MAKE) -C $(LIBFT_DIR)
 
 # Nettoyage des fichiers objets
 clean:
 	$(RM) -r $(OBJ_DIR)
-	make -C $(LIBFT_DIR) clean
+	$(MAKE) -C $(LIBFT_DIR) clean
 
 # Nettoyage complet (binaire + objets)
 fclean: clean
 	$(RM) $(NAME)
-	make -C $(LIBFT_DIR) fclean
+	$(MAKE) -C $(LIBFT_DIR) fclean
 
 # Recompilation complète
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/18 15:46:28 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:16:14 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	has_index_in_range(t_stack *stack, t_var s_var)
 			return (1);
 		current = current->next;
 		if (current == stack)
-			break;
+			break ;
 	}
 	return (0);
 }
@@ -45,11 +45,12 @@ int	find_index_in_range(t_stack *stack, t_var s_var)
 			return (current->index);
 		current = current->next;
 		if (current == stack)
-			break;
+			break ;
 	}
 	return (-1);
 }
 
+// Pousse tous les éléments d’un chunk de A vers B
 // Pousse tous les éléments d’un chunk de A vers B
 void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 {
@@ -59,12 +60,16 @@ void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 	{
 		target_index = find_index_in_range(*a, s_var);
 		if (target_index == -1)
-			break;
+			break ;
 		move_to_top(a, target_index, s_var);
 		if (*a) // sécurité : évite pb si `move_to_top` a vidé la pile
-			pb(a, b);
+		{
+			if (*a) // on s'assure que A n'est pas vide avant de faire pb
+				pb(a, b);
+		}
 	}
 }
+
 
 // Découpe en chunks et pousse chaque chunk de A vers B
 void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
@@ -76,6 +81,11 @@ void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 
 	if (!a || !(*a))
 		return ;
+	if (s_var->chunk_count == 0)
+	{
+		print_error("ERROR: chunk_count is zero");
+		return ;
+	}
 	chunk_size = s_var->size_stack / s_var->chunk_count;
 	start = 0;
 	end = chunk_size - 1;
@@ -94,18 +104,20 @@ void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 }
 
 // Pousse les éléments de B vers A en ordre décroissant
+// Pousse les éléments de B vers A en ordre décroissant
 void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var)
 {
 	int	max_index;
 
-	while (*b)
+	while (*b) // on vérifie que B n'est pas vide avant de faire pa
 	{
 		max_index = find_max_index(*b);
 		move_to_top(b, max_index, s_var);
-		if (*b)
+		if (*b) // on s'assure que B n'est pas vide avant de faire pa
 			pa(a, b);
 	}
 }
+
 
 // Fonction principale de tri
 void	tri_list(t_stack **stack_a, t_var s_var)

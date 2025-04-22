@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/02 19:36:26 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/22 15:58:38 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,11 @@ void	ft_check_value(char **argv)
 	int	j;
 	int	count;
 
-	i = 0;
 	j = 1;
-	count = 0;
 	while (argv[j])
 	{
+		i = 0;
+		count = 0;
 		while (argv[j][i])
 		{
 			if (argv[j][i] >= '0' && argv[j][i] <= '9')
@@ -88,16 +88,13 @@ void	ft_check_value(char **argv)
 			{
 				if (count >= 12)
 					print_error("NUMBER TOO BIG OR TOO SMALL");
-				else
-					count = 0;
+				count = 0;
 			}
 			i++;
 		}
-		i = 0;
 		j++;
-	if (count >= 12)
-		print_error("number too big or too small");
-	count = 0;
+		if (count >= 12)
+			print_error("number too big or too small");
 	}
 }
 

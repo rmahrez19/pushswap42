@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 18:07:51 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/16 18:29:05 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:00:41 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ t_stack	*ft_copy_stack(t_stack *stack)
 		return (NULL);
 	copy = NULL;
 	current = stack;
-
 	while (1)
 	{
 		new_node = ft_malloc(sizeof(t_stack));
@@ -33,14 +32,12 @@ t_stack	*ft_copy_stack(t_stack *stack)
 		new_node->next = NULL;
 		new_node->prev = NULL;
 		ft_add_to_back(&copy, new_node);
-
 		current = current->next;
 		if (current == stack)
-			break;
+			break ;
 	}
 	return (copy);
 }
-
 
 void	ft_sort_stack(t_stack **stack)
 {
@@ -66,7 +63,28 @@ void	ft_sort_stack(t_stack **stack)
 		}
 		temp = temp->next;
 		if (temp == *stack)
-			break;
+			break ;
+	}
+}
+
+static void	ft_set_index_for_node(t_stack *temp, t_stack *sorted_stack)
+{
+	int		index;
+	t_stack	*sorted_temp;
+
+	index = 0;
+	sorted_temp = sorted_stack;
+	while (1)
+	{
+		if (temp->content == sorted_temp->content)
+		{
+			temp->index = index;
+			break ;
+		}
+		index++;
+		sorted_temp = sorted_temp->next;
+		if (sorted_temp == sorted_stack)
+			break ;
 	}
 }
 
@@ -74,8 +92,6 @@ void	ft_assign_index(t_stack **stack)
 {
 	t_stack	*temp;
 	t_stack	*sorted_stack;
-	t_stack	*sorted_temp;
-	int		index;
 
 	if (!stack || !*stack)
 		return ;
@@ -84,31 +100,17 @@ void	ft_assign_index(t_stack **stack)
 	temp = *stack;
 	while (1)
 	{
-		index = 0;
-		sorted_temp = sorted_stack;
-		while (1)
-		{
-			if (temp->content == sorted_temp->content)
-			{
-				temp->index = index;
-				break;
-			}
-			index++;
-			sorted_temp = sorted_temp->next;
-			if (sorted_temp == sorted_stack)
-				break;
-		}
+		ft_set_index_for_node(temp, sorted_stack);
 		temp = temp->next;
 		if (temp == *stack)
-			break;
+			break ;
 	}
 }
 
-
 int	find_max_index(t_stack *stack)
 {
-	t_stack	*current;
-	int		max;
+	t_stack *current;
+	int max;
 
 	if (!stack)
 		return (-1);
