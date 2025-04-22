@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/22 17:08:11 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/23 01:40:16 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,11 @@ int	verif_tri_c(t_stack **stack)
 	{
 		if (current->content > current->next->content)
 		{
-			ft_printf("pas trier\n");
 			return (1);
 		}
 		current = current->next;
 		if (current->next == *stack)
 		{
-			ft_printf("trier\n");
 			return (0);
 		}
 	}
@@ -49,7 +47,6 @@ int	verif_tri_d(t_stack **stack)
 		current = current->next;
 		if (current == *stack)
 		{
-			ft_printf("bien trier");
 			return (0);
 		}
 	}
@@ -66,7 +63,32 @@ void	chunk_count(t_var *s_var, t_stack *stack_a)
 		s_var->chunk_count = 1;
 }
 
-void	move_to_top(t_stack **stack, int index, t_var s_var)
+void	move_to_top_rotation(t_stack **stack, int steps, int size, char c)
+{
+	if (steps <= size / 2)
+	{
+		while (steps-- > 0)
+		{
+			if (c == 'a')
+				ra(stack);
+			else
+				rb(stack);
+		}
+	}
+	else
+	{
+		steps = size - steps;
+		while (steps-- > 0)
+		{
+			if (c == 'a')
+				rra(stack);
+			else
+				rrb(stack);
+		}
+	}
+}
+
+void	move_to_top(t_stack **stack, int index, t_var s_var, char c)
 {
 	t_stack	*current;
 	int		steps;
@@ -84,20 +106,10 @@ void	move_to_top(t_stack **stack, int index, t_var s_var)
 			break ;
 		steps++;
 		current = current->next;
-		if (current == *stack) // Index introuvable
+		if (current == *stack)
 			return ;
 	}
 	if (steps == 0)
-		return ; // Déjà en haut
-
-	if (steps <= size / 2)
-		while (steps-- > 0)
-			ra(stack);
-	else
-	{
-		steps = size - steps;
-		while (steps-- > 0)
-			rra(stack);
-	}
+		return ;
+	move_to_top_rotation(stack, steps, size, c);
 }
-

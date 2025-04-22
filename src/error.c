@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/22 15:58:38 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/23 01:33:04 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	print_error(char *str)
+void	print_error(char *str) //
 {
 	ft_free();
 	printf(RED "%s\n" RESET, str);
 	exit(0);
 }
 
-void	ft_check_signe(char **argv)
+void	ft_check_signe(char **argv) //
 {
 	int	i;
 	int	j;
@@ -48,7 +48,7 @@ void	ft_check_signe(char **argv)
 	}
 }
 
-void	ft_check_num(char **argv)
+void	ft_check_num(char **argv) //
 {
 	int	i;
 	int	j;
@@ -69,7 +69,7 @@ void	ft_check_num(char **argv)
 	}
 }
 
-void	ft_check_value(char **argv)
+void	ft_check_value(char **argv) //
 {
 	int	i;
 	int	j;
@@ -98,7 +98,7 @@ void	ft_check_value(char **argv)
 	}
 }
 
-void	ft_check_error(char **argv)
+void	ft_check_error(char **argv) //
 {
 	ft_check_num(argv);
 	ft_check_value(argv);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/22 17:16:14 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/04/23 00:56:27 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 		target_index = find_index_in_range(*a, s_var);
 		if (target_index == -1)
 			break ;
-		move_to_top(a, target_index, s_var);
+		move_to_top(a, target_index, s_var, 'a');
 		if (*a) // sécurité : évite pb si `move_to_top` a vidé la pile
 		{
 			if (*a) // on s'assure que A n'est pas vide avant de faire pb
@@ -112,7 +112,7 @@ void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var)
 	while (*b) // on vérifie que B n'est pas vide avant de faire pa
 	{
 		max_index = find_max_index(*b);
-		move_to_top(b, max_index, s_var);
+		move_to_top(b, max_index, s_var, 'b');
 		if (*b) // on s'assure que B n'est pas vide avant de faire pa
 			pa(a, b);
 	}
