@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/23 01:40:16 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/28 00:23:03 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,19 +97,25 @@ void	move_to_top(t_stack **stack, int index, t_var s_var, char c)
 	(void)s_var;
 	if (!stack || !(*stack) || (*stack)->next == *stack)
 		return ;
-	size = str_list(stack);
-	current = *stack;
+	size = str_list(stack); // Taille de la pile
 	steps = 0;
-	while (1)
+	current = *stack;
+
+	// Recherche de l'index dans la pile et calcul des étapes nécessaires
+	while (current)
 	{
 		if (current->index == index)
-			break ;
+			break;
 		steps++;
 		current = current->next;
-		if (current == *stack)
+		if (current == *stack) // Si on fait un tour complet
 			return ;
 	}
+
+	// Si l'élément est déjà au sommet, pas besoin de faire de rotation
 	if (steps == 0)
 		return ;
+
+	// Déplacement vers le sommet
 	move_to_top_rotation(stack, steps, size, c);
 }

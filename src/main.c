@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/23 01:39:11 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/28 00:23:30 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int	main(int ac, char **av)
 		exit(0);
 	chunk_count(&s_var, stack_a);
 	choice_tri(&stack_a, s_var);
-	// print_list(&stack_a);
+	print_list(&stack_a);
 	ft_free();
 }

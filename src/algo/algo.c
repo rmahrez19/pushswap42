@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/27 22:15:59 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/28 00:17:03 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,8 @@ void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 		if (target_index == -1)
 			break ;
 		move_to_top(a, target_index, s_var, 'a');
-		if (*a) // sécurité : évite pb si `move_to_top` a vidé la pile
-		{
-			if (*a) // on s'assure que A n'est pas vide avant de faire pb
-				pb(a, b);
-		}
+		if (*a) // on s'assure que A n'est pas vide avant de faire pb
+			pb(a, b);
 	}
 }
 
