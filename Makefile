@@ -1,60 +1,55 @@
 # **************************************************************************** #
-#                                  VARIABLES                                   #
+#                                  VARIABLES                                  #
 # **************************************************************************** #
 
-CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -g
-NAME        = push_swap
-
-SRC_DIR     = src
-OBJ_DIR     = obj
-INC_DIR     = includes
-LIBFT_DIR   = libft
-LIBFT       = $(LIBFT_DIR)/libft.a
-
-# Commande pour créer un dossier
-MKDIR       = mkdir -p
-
-# Recherche les fichiers sources automatiquement dans SRC_DIR
-VPATH       = $(SRC_DIR)
-
-# Liste des fichiers sources (chemins relatifs à SRC_DIR)
-SRCS        = main.c parsing.c piles.c error.c rota/rota.c  rota/swap.c rota/push.c small.c utils.c algo.c utils_pile.c init.c index.c
-
-# Création des objets dans obj/ en gardant la structure des sous-dossiers
-OBJS        = $(SRCS:%.c=$(OBJ_DIR)/%.o)
+NAME    = push_swap
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror -g -Iincludes
+RM      = rm -f
 
 # **************************************************************************** #
-#                                   RULES                                      #
+#                                  SOURCES                                    #
 # **************************************************************************** #
 
-# Règle par défaut
+SRC_DIR = src
+OBJ_DIR = obj
+
+SRC_FILES = main.c \
+            parsing/parsing.c parsing/error.c \
+            pile/piles.c pile/utils_pile.c \
+            rota/rota.c rota/swap.c rota/push.c \
+            algo/algo.c algo/push_back.c algo/small.c \
+            init.c index.c utils.c
+
+SRC      = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
+OBJ      = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
+
+LIBFT    = libft/libft.a
+
+# **************************************************************************** #
+#                                 RULES                                        #
+# **************************************************************************** #
+
 all: $(NAME)
 
-# Compilation de l'exécutable
-$(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT)
+$(NAME): $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
-# Compilation des fichiers .c en .o, avec création auto des sous-dossiers dans obj/
-$(OBJ_DIR)/%.o: %.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
-# Compilation de la libft
 $(LIBFT):
-	$(MAKE) -C $(LIBFT_DIR)
+	make -C libft
 
-# Nettoyage des fichiers objets
 clean:
-	$(RM) -r $(OBJ_DIR)
-	$(MAKE) -C $(LIBFT_DIR) clean
+	$(RM) $(OBJ)
+	make -C libft clean
 
-# Nettoyage complet (binaire + objets)
 fclean: clean
 	$(RM) $(NAME)
-	$(MAKE) -C $(LIBFT_DIR) fclean
+	make -C libft fclean
 
-# Recompilation complète
 re: fclean all
 
 .PHONY: all clean fclean re

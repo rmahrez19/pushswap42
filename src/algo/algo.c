@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/23 00:56:27 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/27 22:15:59 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,11 @@ void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 }
 
 
-// Découpe en chunks et pousse chaque chunk de A vers B
+
+
+// Pousse les éléments de B vers A en ordre décroissant
+// Pousse les éléments de B vers A en ordre décroissant
+
 void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 {
 	int	chunk_size;
@@ -79,11 +83,9 @@ void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 	int	end;
 	int	i;
 
-	if (!a || !(*a))
-		return ;
-	if (s_var->chunk_count == 0)
+	if (!a || !(*a) || s_var->chunk_count == 0)
 	{
-		print_error("ERROR: chunk_count is zero");
+		print_error("ERROR: Invalid stack or chunk_count");
 		return ;
 	}
 	chunk_size = s_var->size_stack / s_var->chunk_count;
@@ -102,22 +104,6 @@ void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 		i++;
 	}
 }
-
-// Pousse les éléments de B vers A en ordre décroissant
-// Pousse les éléments de B vers A en ordre décroissant
-void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var)
-{
-	int	max_index;
-
-	while (*b) // on vérifie que B n'est pas vide avant de faire pa
-	{
-		max_index = find_max_index(*b);
-		move_to_top(b, max_index, s_var, 'b');
-		if (*b) // on s'assure que B n'est pas vide avant de faire pa
-			pa(a, b);
-	}
-}
-
 
 // Fonction principale de tri
 void	tri_list(t_stack **stack_a, t_var s_var)

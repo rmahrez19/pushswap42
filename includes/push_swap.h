@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/23 00:47:46 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/27 22:21:16 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ void chunk_count(t_var *s_var, t_stack *stack_a);
 int find_max_index(t_stack *stack);
 void	move_to_top(t_stack **stack, int index, t_var s_var, char c);
 int	find_max_index(t_stack *stack);
+void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var);
+
 
 void log_move(const char *move);
 #endif
