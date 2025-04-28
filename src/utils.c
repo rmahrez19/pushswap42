@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/28 00:23:03 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/28 19:51:02 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ void	chunk_count(t_var *s_var, t_stack *stack_a)
 {
 	s_var->size_stack = str_list(&stack_a);
 	if (s_var->size_stack <= 100)
-		s_var->chunk_count = s_var->size_stack / 5;
+		s_var->chunk_count = s_var->size_stack / 15;
 	else if (s_var->size_stack <= 500)
-		s_var->chunk_count = s_var->size_stack / 10;
+		s_var->chunk_count = s_var->size_stack / 50;
 	if (s_var->chunk_count == 0)
 		s_var->chunk_count = 1;
 }

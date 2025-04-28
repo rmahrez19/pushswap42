@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/28 00:23:30 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/28 17:50:16 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int	main(int ac, char **av)
 		exit(0);
 	chunk_count(&s_var, stack_a);
 	choice_tri(&stack_a, s_var);
-	print_list(&stack_a);
+	// print_list(&stack_a);
 	ft_free();
 }
