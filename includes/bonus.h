@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   color.h                                            :+:      :+:    :+:   */
+/*   bonus.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 17:42:42 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/29 10:43:27 by hectordavro      ###   ########.fr       */
+/*   Created: 2025/04/29 10:29:23 by hectordavro       #+#    #+#             */
+/*   Updated: 2025/04/29 18:18:36 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLOR_H
-# define COLOR_H
+#ifndef BONUS_H
+#define BONUS_H
 
-# define BLACK   "\033[30m"
-# define RED     "\033[31m"
-# define GREEN   "\033[32m"
-# define YELLOW  "\033[33m"
-# define BLUE    "\033[34m"
-# define MAGENTA "\033[35m"
-# define CYAN    "\033[36m"
-# define WHITE   "\033[37m"
-# define RESET   "\033[0m"
-#define PURPLE "\033[0;35m"
-#define BLINK      "\033[5m"
-#define CLEAR   "\033[2J\033[H"
+#include <termios.h>
+
+int ft_print_loby(void);
+void ft_sleep(unsigned int seconds);
+char getch(void);
+int number_element(void);
+
 #endif

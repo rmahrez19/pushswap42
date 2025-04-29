@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/27 22:21:16 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/04/29 10:32:03 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "../libft/libft.h"
 # include <limits.h>
 # include <stdlib.h>
+#include <sys/wait.h>
+#include "bonus.h" 
 
 typedef struct s_stack
 {

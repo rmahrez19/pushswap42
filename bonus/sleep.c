@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   color.h                                            :+:      :+:    :+:   */
+/*   sleep.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 17:42:42 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/29 10:43:27 by hectordavro      ###   ########.fr       */
+/*   Created: 2025/04/29 10:48:44 by hectordavro       #+#    #+#             */
+/*   Updated: 2025/04/29 11:01:38 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLOR_H
-# define COLOR_H
+#include "../includes/push_swap.h"
 
-# define BLACK   "\033[30m"
-# define RED     "\033[31m"
-# define GREEN   "\033[32m"
-# define YELLOW  "\033[33m"
-# define BLUE    "\033[34m"
-# define MAGENTA "\033[35m"
-# define CYAN    "\033[36m"
-# define WHITE   "\033[37m"
-# define RESET   "\033[0m"
-#define PURPLE "\033[0;35m"
-#define BLINK      "\033[5m"
-#define CLEAR   "\033[2J\033[H"
-#endif
+
+void ft_sleep(unsigned int seconds) 
+{
+    unsigned int i, j;
+
+    while (seconds--)
+    {
+        i = 0;
+        while (i < 4294967295U) // Boucle pour "perdre du temps"
+        {
+            j = 0;
+            while (j < 1000)
+                j++;
+            i++;
+        }
+    }
+}
