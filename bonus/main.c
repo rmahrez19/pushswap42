@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 08:06:59 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/29 18:20:23 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/03 18:11:19 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 void execv_puswap(char **args)
 {
     pid_t pid;
-    
+
     pid = fork();
     if(pid < 0)
     {
         ft_printf(RED "Error fork");
-        exit(1);        
+        exit(1);
     }
     else if(pid == 0)
     {
@@ -39,11 +39,11 @@ void execv_puswap(char **args)
     return ;
 }
 
-char  **creat_argument(char **av, int ac)
+char  **creat_argument(int ac, char **av)
 {
     int i;
     char **args;
-    
+
     i = 1;
     args = malloc(sizeof(char *) * (ac + 1));
     if(!args)
@@ -63,13 +63,13 @@ char  **creat_argument(char **av, int ac)
 int main(int ac, char **av)
 {
     char **args;
-    
+
     if(ft_print_loby() == 1)
     {
-        number_element();
-        exit(0);
+        ac = number_element();
+		args = creat_argument(ac, ft_random_element(ac));
     }
     else
-        args = creat_argument(av, ac);
+        args = creat_argument(ac, av);
     execv_puswap(args);
 }

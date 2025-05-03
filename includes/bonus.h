@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bonus.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 10:29:23 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/05/02 18:45:18 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/03 18:06:49 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int ft_print_loby(void);
 void ft_sleep(unsigned int seconds);
 char getch(void);
 int number_element(void);
+char	**ft_random_element(int num_element);
 
 #endif
