@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bonus.h                                            :+:      :+:    :+:   */
+/*   random_element.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 10:29:23 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/05/02 18:45:18 by hectordavro      ###   ########.fr       */
+/*   Created: 2025/05/02 13:17:53 by hectordavro       #+#    #+#             */
+/*   Updated: 2025/05/02 18:58:23 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BONUS_H
-#define BONUS_H
+#include "../includes/push_swap.h"
 
-#include <termios.h>
-#include <time.h>
-#include "push_swap.h"
+#define  max_element = 2000; 
 
-int ft_print_loby(void);
-void ft_sleep(unsigned int seconds);
-char getch(void);
-int number_element(void);
 
-#endif
+void ft_random_element(int num_element)
+{
+    if (num_element > max_element)
+          num_element = max_element;
+    return ;
+}

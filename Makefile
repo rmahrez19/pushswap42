@@ -8,6 +8,9 @@ CC      = cc
 CFLAGS  = -Wall -Wextra -Werror -g -Iincludes
 RM      = rm -f
 
+# SDL2
+SDL2_FLAGS = $(shell sdl2-config --cflags --libs)
+
 # **************************************************************************** #
 #                                  SOURCES                                    #
 # **************************************************************************** #
@@ -29,7 +32,7 @@ OBJ      = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 BONUS_DIR = bonus
 BONUS_OBJ_DIR = obj_bonus
 
-BONUS_FILES = main.c utils.c loby.c sleep.c event.c
+BONUS_FILES = main.c utils.c loby.c sleep.c event.c random_element.c
 BONUS_SRC   = $(addprefix $(BONUS_DIR)/, $(BONUS_FILES))
 BONUS_OBJ   = $(addprefix $(BONUS_OBJ_DIR)/, $(BONUS_FILES:.c=.o))
 
@@ -45,9 +48,9 @@ $(NAME): $(LIBFT) $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
 bonus: $(LIBFT) $(BONUS)
-	
+
 $(BONUS): $(BONUS_OBJ)
-	$(CC) $(CFLAGS) $(BONUS_OBJ) $(LIBFT) -o $(BONUS)
+	$(CC) $(CFLAGS) $(BONUS_OBJ) $(LIBFT) $(SDL2_FLAGS) -o $(BONUS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(dir $@)

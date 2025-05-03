@@ -6,7 +6,7 @@
 /*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:13:55 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/29 20:58:30 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/02 13:18:11 by hectordavro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,3 @@ int number_element(void)
     return(ft_atoi(value));
 }
 
-void ft_random_element()
