@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 13:17:53 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/05/03 18:18:06 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/05 17:14:56 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,13 @@ char	**ft_random_element(int num_element)
 		temp[i++] = seed % 100000;
 	}
 
-	res = malloc(sizeof(char *) * (num_element + 1));
+	res = malloc(sizeof(char *) * (num_element + 2));
 	if (!res)
 		return free(temp), NULL;
 
-	res[num_element] = NULL;
-	i = 0;
+	res[0] = ft_strdup("./push_swap");
+	res[num_element + 1] = NULL;
+	i = 1;
 	while (i < num_element)
 	{
 		res[i] = ft_itoa(temp[i]);

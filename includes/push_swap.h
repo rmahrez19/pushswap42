@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/03 18:06:24 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/05 21:11:37 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	move_to_top(t_stack **stack, int index, t_var s_var, char c);
 int	find_max_index(t_stack *stack);
 void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var);
 
+void print(t_stack *a);
 
 void log_move(const char *move);
 #endif

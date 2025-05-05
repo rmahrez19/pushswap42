@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/23 01:33:04 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/05 18:38:28 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,35 @@ void	print_error(char *str) //
 	exit(0);
 }
 
-void	ft_check_signe(char **argv) //
+void	ft_check_signe(char **argv)
 {
 	int	i;
 	int	j;
-	int	flag;
 
 	j = 1;
-	flag = 0;
 	while (argv[j])
 	{
 		i = 0;
 		while (argv[j][i])
 		{
-			if (argv[j][i] != ' ' && flag == 0)
+			if ((argv[j][i] == '+' || argv[j][i] == '-') &&
+				(i == 0 || argv[j][i - 1] == ' '))
 			{
-				flag = 1;
-				if (argv[j][i] == '-' || argv[j][i] == '+')
-					i++;
+				// après un + ou - il doit y avoir un chiffre
+				if (!(argv[j][i + 1] >= '0' && argv[j][i + 1] <= '9'))
+					print_error("Invalid sign usage");
 			}
-			if (argv[j][i] == ' ')
-				flag = 0;
-			if (flag == 1 && (argv[j][i] == '-' || argv[j][i] == '+'))
-				print_error("arg invalid");
+			else if (argv[j][i] == '+' || argv[j][i] == '-')
+			{
+				// signe mal placé (pas en début de nombre)
+				print_error("Invalid sign placement");
+			}
 			i++;
 		}
 		j++;
 	}
 }
+
 
 void	ft_check_num(char **argv) //
 {
@@ -69,7 +70,7 @@ void	ft_check_num(char **argv) //
 	}
 }
 
-void	ft_check_value(char **argv) //
+void	ft_check_value(char **argv)
 {
 	int	i;
 	int	j;
@@ -80,23 +81,22 @@ void	ft_check_value(char **argv) //
 	{
 		i = 0;
 		count = 0;
+		if (argv[j][i] == '-' || argv[j][i] == '+')
+			i++; // ignorer le signe s'il existe
 		while (argv[j][i])
 		{
 			if (argv[j][i] >= '0' && argv[j][i] <= '9')
 				count++;
 			else
-			{
-				if (count >= 12)
-					print_error("NUMBER TOO BIG OR TOO SMALL");
-				count = 0;
-			}
+				print_error("INVALID CHARACTER IN NUMBER");
 			i++;
 		}
+		if (count > 12)
+			print_error("NUMBER TOO BIG OR TOO SMALL");
 		j++;
-		if (count >= 12)
-			print_error("number too big or too small");
 	}
 }
+
 
 void	ft_check_error(char **argv) //
 {

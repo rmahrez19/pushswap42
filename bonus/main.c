@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 08:06:59 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/05/03 18:11:19 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/05 20:43:59 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,16 +60,37 @@ char  **creat_argument(int ac, char **av)
     args[ac] = NULL ;
     return (args);
 }
+
+
+void print_tab_3(char **args)
+{
+	int i = 0;
+
+	while(args[i])
+	{
+		printf(RESET "%s\n", args[i]);
+		i++;
+	}
+}
 int main(int ac, char **av)
 {
     char **args;
+	t_stack *stack_a;
 
     if(ft_print_loby() == 1)
     {
+
         ac = number_element();
-		args = creat_argument(ac, ft_random_element(ac));
+		args = ft_random_element(ac);
+		print_tab_3(ft_random_element(ac));
     }
     else
+	{
         args = creat_argument(ac, av);
-    execv_puswap(args);
+	}
+	execv_puswap(args);
+	stack_a = ft_pars(args);
+	print(stack_a);
+	// printf("%s", get_next_line(1));
+    return 0;
 }
