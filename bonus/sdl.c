@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 20:30:47 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/05 21:35:21 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:08:46 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,11 +86,16 @@ void	draw_stack_visualizer(t_sdl *sdl, t_stack *stack, int stack_size)
 }
 
 
-void print(t_stack *a)
+void print(t_stack *a,char **moves)
 {
+	t_stack *b = NULL;
 	t_sdl sdl;
-	(void)a;
+
 	init_sdl_window(&sdl, "VIZU");
-	draw_stack_visualizer(&sdl, a, str_list(&a));
-	while(1);
+	while(1)
+	{
+		draw_stack_visualizer(&sdl, a, str_list(&a));
+		ft_moves(moves, &a, &b);
+		sleep(1);
+	}
 }

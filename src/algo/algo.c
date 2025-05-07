@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/28 00:17:03 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/07 11:09:45 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,6 @@ void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 			pb(a, b);
 	}
 }
-
-
-
 
 // Pousse les éléments de B vers A en ordre décroissant
 // Pousse les éléments de B vers A en ordre décroissant

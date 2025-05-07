@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/05 21:11:37 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:06:50 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 #include <sys/wait.h>
 #include "bonus.h"
+#include <unistd.h>
 
 typedef struct s_stack
 {
@@ -63,14 +64,16 @@ void	ft_delone_last(t_stack **stack);
 // rotaion
 
 void				sa(t_stack **stack_a);
+// void				ss(t_stack **stack_a, t_stack **stack_b);
 void				sb(t_stack **stack_b);
 void				pb(t_stack **stack_a, t_stack **stack_b);
 void				pa(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
+// void				rr(t_stack **stack_a, t_stack **stack_b);
 void				rra(t_stack **stack_a);
 void				rrb(t_stack **stack_b);
-
+// void				rrr(t_stack **stack_a, t_stack **stack_b);
 // tri
 int					verif_tri_c(t_stack **stack);
 int					verif_tri_d(t_stack **stack);
@@ -89,7 +92,7 @@ void	move_to_top(t_stack **stack, int index, t_var s_var, char c);
 int	find_max_index(t_stack *stack);
 void	push_back_to_a(t_stack **a, t_stack **b, t_var s_var);
 
-void print(t_stack *a);
-
+void print(t_stack *a,char **moves);
+void ft_moves(char **moves, t_stack **a, t_stack **b);
 void log_move(const char *move);
 #endif

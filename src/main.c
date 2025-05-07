@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 12:31:07 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/05 17:17:33 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:10:22 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 		print_error("ERROR ARGUMENT");
 	stack_a = ft_pars(av);
 	// print_list(&stack_a);
-	if(!verif_tri_c(&stack_a))
+	if (!verif_tri_c(&stack_a))
 		return (0);
 	s_var.size_stack = str_list(&stack_a);
 	if (s_var.size_stack <= 1)

@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 17:37:15 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/28 19:51:02 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:10:25 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ void	move_to_top_rotation(t_stack **stack, int steps, int size, char c)
 
 void	move_to_top(t_stack **stack, int index, t_var s_var, char c)
 {
-	t_stack	*current;
-	int		steps;
-	int		size;
+	t_stack *current;
+	int steps;
+	int size;
 
 	(void)s_var;
 	if (!stack || !(*stack) || (*stack)->next == *stack)
@@ -105,7 +105,7 @@ void	move_to_top(t_stack **stack, int index, t_var s_var, char c)
 	while (current)
 	{
 		if (current->index == index)
-			break;
+			break ;
 		steps++;
 		current = current->next;
 		if (current == *stack) // Si on fait un tour complet

@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 08:06:59 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/05/05 20:43:59 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:08:17 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,41 @@
 
 
 
-void execv_puswap(char **args)
+char **execv_puswap(char **args)
 {
-    pid_t pid;
+	int		fd[2];
+	pid_t	pid;
+	char	**lines;
+	char	*line;
+	int		i;
 
-    pid = fork();
-    if(pid < 0)
-    {
-        ft_printf(RED "Error fork");
-        exit(1);
-    }
-    else if(pid == 0)
-    {
-        if(execve("./push_swap", args, NULL) == -1)
-        {
-            ft_printf(RED "Error execve");
-            exit(EXIT_FAILURE);
-        }
-    }
-    else
-        wait(NULL);
-    return ;
+	if (pipe(fd) == -1)
+		return (NULL);
+	pid = fork();
+	if (pid < 0)
+		return (close(fd[0]), close(fd[1]), NULL);
+	if (pid == 0)
+	{
+		close(fd[0]);
+		dup2(fd[1], STDOUT_FILENO);
+		close(fd[1]);
+		execve("./push_swap", args, NULL);
+		ft_printf(RED "Error execve\n");
+		exit(EXIT_FAILURE);
+	}
+	close(fd[1]);
+	lines = malloc(sizeof(char *) * 1000); // à adapter dynamiquement si besoin
+	if (!lines)
+		return (close(fd[0]), NULL);
+	i = 0;
+	while ((line = get_next_line(fd[0])) != NULL)
+		lines[i++] = line;
+	lines[i] = NULL;
+	close(fd[0]);
+	wait(NULL);
+	return (lines);
 }
+
 
 char  **creat_argument(int ac, char **av)
 {
@@ -72,10 +85,13 @@ void print_tab_3(char **args)
 		i++;
 	}
 }
+
+
 int main(int ac, char **av)
 {
     char **args;
 	t_stack *stack_a;
+	char **moves;
 
     if(ft_print_loby() == 1)
     {
@@ -88,9 +104,9 @@ int main(int ac, char **av)
 	{
         args = creat_argument(ac, av);
 	}
-	execv_puswap(args);
+	moves = execv_puswap(args);
 	stack_a = ft_pars(args);
-	print(stack_a);
-	// printf("%s", get_next_line(1));
+	printf("clear" CLEAR);
+	print(stack_a, moves);
     return 0;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/23 01:34:56 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/07 11:09:59 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_attribute(int n, t_stack **stack) //
 
 void	ft_pars_line(char **argv, t_stack **stack_a) //
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	j = 1;
 	i = 0;

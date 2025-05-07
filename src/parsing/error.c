@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/05 18:38:28 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:09:56 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	ft_check_signe(char **argv)
 		i = 0;
 		while (argv[j][i])
 		{
-			if ((argv[j][i] == '+' || argv[j][i] == '-') &&
-				(i == 0 || argv[j][i - 1] == ' '))
+			if ((argv[j][i] == '+' || argv[j][i] == '-') && (i == 0 || argv[j][i
+					- 1] == ' '))
 			{
 				// après un + ou - il doit y avoir un chiffre
 				if (!(argv[j][i + 1] >= '0' && argv[j][i + 1] <= '9'))
@@ -48,11 +48,10 @@ void	ft_check_signe(char **argv)
 	}
 }
 
-
 void	ft_check_num(char **argv) //
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	j = 1;
 	i = 0;
@@ -96,7 +95,6 @@ void	ft_check_value(char **argv)
 		j++;
 	}
 }
-
 
 void	ft_check_error(char **argv) //
 {

@@ -37,7 +37,7 @@ MAIN_SRC    = $(SRC_DIR)/main.c
 MAIN_OBJ    = $(OBJ_DIR)/main.o
 
 # Fichiers spécifiques au bonus
-BONUS_FILES = main.c utils.c loby.c sleep.c event.c random_element.c sdl.c
+BONUS_FILES = main.c utils.c loby.c sleep.c event.c random_element.c sdl.c moves.c
 BONUS_SRC   = $(addprefix $(BONUS_DIR)/, $(BONUS_FILES))
 BONUS_OBJ   = $(addprefix $(BONUS_OBJ_DIR)/, $(BONUS_FILES:.c=.o))
 

@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 13:17:53 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/05/05 17:14:56 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:17:55 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,38 +20,64 @@ int	my_rand(int seed)
 	return (seed);
 }
 
+static int	is_duplicate(int *tab, int size, int value)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (tab[i] == value)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+
+char	**ft_fill_result(int *tab, int size, char **res)
+{
+	int	i;
+
+	res[0] = ft_strdup("./push_swap");
+	if (!res[0])
+		return (free(tab), free(res), NULL);
+	i = 0;
+	while (i < size)
+	{
+		res[i + 1] = ft_itoa(tab[i]);
+		if (!res[i + 1])
+			return (NULL); // tu peux gérer le free ici si tu veux plus clean
+		i++;
+	}
+	res[size + 1] = NULL;
+	free(tab);
+	return (res);
+}
+
 char	**ft_random_element(int num_element)
 {
-	int seed = 123456789;
-	int i = 0;
-	char **res;
-	int *temp;
+	int		seed;
+	int		i;
+	int		*tab;
+	char	**res;
 
 	if (num_element > MAX_ELEMENT)
 		num_element = MAX_ELEMENT;
-
-	temp = malloc(sizeof(int) * num_element);
-	if (!temp)
-		return NULL;
-
+	tab = malloc(sizeof(int) * num_element);
+	if (!tab)
+		return (NULL);
+	seed = 123456789;
+	i = 0;
 	while (i < num_element)
 	{
 		seed = my_rand(seed);
-		temp[i++] = seed % 100000;
+		if (!is_duplicate(tab, i, seed % 100000))
+			tab[i++] = seed % 100000;
 	}
-
 	res = malloc(sizeof(char *) * (num_element + 2));
 	if (!res)
-		return free(temp), NULL;
-
-	res[0] = ft_strdup("./push_swap");
-	res[num_element + 1] = NULL;
-	i = 1;
-	while (i < num_element)
-	{
-		res[i] = ft_itoa(temp[i]);
-		i++;
-	}
-	free(temp);
-	return res;
+		return (free(tab), NULL);
+	return (ft_fill_result(tab, num_element, res));
 }
+
