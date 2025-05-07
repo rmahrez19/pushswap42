@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hectordavrou <hectordavrou@student.42.f    +#+  +:+       +#+        */
+/*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 18:07:51 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/23 01:34:31 by hectordavro      ###   ########.fr       */
+/*   Updated: 2025/05/07 11:27:49 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_stack	*ft_copy_stack(t_stack *stack) //
+t_stack	*ft_copy_stack(t_stack *stack)
 {
 	t_stack	*copy;
 	t_stack	*current;
@@ -88,7 +88,7 @@ static void	ft_set_index_for_node(t_stack *temp, t_stack *sorted_stack)
 	}
 }
 
-void	ft_assign_index(t_stack **stack) //
+void	ft_assign_index(t_stack **stack)
 {
 	t_stack	*temp;
 	t_stack	*sorted_stack;
@@ -109,8 +109,8 @@ void	ft_assign_index(t_stack **stack) //
 
 int	find_max_index(t_stack *stack)
 {
-	t_stack *current;
-	int max;
+	t_stack	*current;
+	int		max;
 
 	if (!stack)
 		return (-1);

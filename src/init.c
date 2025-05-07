@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 16:38:02 by hectordavro       #+#    #+#             */
-/*   Updated: 2025/04/22 17:00:44 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:32:44 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,58 +14,30 @@
 
 void	init_position_value(t_stack **stack, t_var *s_var)
 {
-	t_stack	*curent;
+	t_stack	*cur;
 	int		i;
+	int		val;
 
 	i = 2;
-	s_var->max_value = (*stack)->content;
-	s_var->min_value = (*stack)->content;
+	val = (*stack)->content;
+	s_var->max_value = val;
+	s_var->min_value = val;
 	s_var->max_position = 1;
 	s_var->min_position = 1;
-	curent = *stack;
-	while (1)
+	cur = *stack;
+	while ((cur = cur->next) && cur != *stack)
 	{
-		curent = curent->next;
-		if (curent == *stack || !curent)
-			break ;
-		if (s_var->max_value <= curent->content)
+		if (cur->content >= s_var->max_value)
 		{
-			s_var->max_value = curent->content;
+			s_var->max_value = cur->content;
 			s_var->max_position = i;
 		}
-		if (s_var->min_value >= curent->content)
+		if (cur->content <= s_var->min_value)
 		{
-			s_var->min_value = curent->content;
+			s_var->min_value = cur->content;
 			s_var->min_position = i;
 		}
 		i++;
-	}
-}
-
-int	ft_nombre_significatif(int nbr, int place)
-{
-	char	*str;
-	int		size;
-	int		temp;
-
-	str = ft_itoa(nbr);
-	if (!str)
-		print_error(RED "ERROR ALLOCATION" RESET);
-	size = ft_strlen(str);
-	if (nbr < 0)
-	{
-		// size--;
-		if (place > size)
-			return (0);
-		temp = str[size - place] - '0';
-		return (temp * -1);
-	}
-	else
-	{
-		if (place > size)
-			return (0);
-		temp = str[size - place] - '0';
-		return (temp);
 	}
 }
 
@@ -78,10 +50,9 @@ void	init_index(t_stack **stack)
 	current = *stack;
 	while (1)
 	{
-		printf("ok");
 		current->index = index;
 		current = current->next;
-		if (current == (*stack))
+		if (current == *stack)
 			break ;
 		index++;
 	}

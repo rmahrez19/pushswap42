@@ -6,13 +6,13 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:27:16 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/07 11:09:59 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:20:18 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_attribute(int n, t_stack **stack) //
+void	ft_attribute(int n, t_stack **stack)
 {
 	if (!(n >= INT_MIN && n <= INT_MAX))
 		print_error("NUMBER TOO BIG OR TOO SMALL");
@@ -24,10 +24,10 @@ void	ft_attribute(int n, t_stack **stack) //
 		ft_creat_node(stack, n);
 }
 
-void	ft_pars_line(char **argv, t_stack **stack_a) //
+void	ft_pars_line(char **argv, t_stack **stack_a)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	j = 1;
 	i = 0;
@@ -51,7 +51,8 @@ void	ft_pars_line(char **argv, t_stack **stack_a) //
 
 t_stack	*ft_pars(char **argv)
 {
-	t_stack *stack_a;
+	t_stack	*stack_a;
+
 	stack_a = NULL;
 	ft_check_error(argv);
 	ft_pars_line(argv, &stack_a);

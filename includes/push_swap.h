@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:32:43 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/07 11:06:50 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 12:15:04 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,19 +70,19 @@ void				pb(t_stack **stack_a, t_stack **stack_b);
 void				pa(t_stack **stack_a, t_stack **stack_b);
 void				ra(t_stack **stack_a);
 void				rb(t_stack **stack_b);
-// void				rr(t_stack **stack_a, t_stack **stack_b);
+void				rr(t_stack **stack_a, t_stack **stack_b);
 void				rra(t_stack **stack_a);
 void				rrb(t_stack **stack_b);
-// void				rrr(t_stack **stack_a, t_stack **stack_b);
+void				rrr(t_stack **stack_a, t_stack **stack_b);
 // tri
 int					verif_tri_c(t_stack **stack);
 int					verif_tri_d(t_stack **stack);
 void				choice_tri(t_stack **stack_a, t_var s_var);
 void				init_position_value(t_stack **stack, t_var *s_var);
-int					ft_nombre_significatif(int nbr, int place);
 void				tri_list(t_stack **stack_a, t_var s_var);
 void				tri_3_croissant(t_stack **stack_a);
 void	ft_assign_index(t_stack **stack);
+void	move_optimized(t_stack **a, t_stack **b, int index_a, t_var s_var);
 
 // utils
 void				ft_init(t_stack **stack, t_var *s_var);

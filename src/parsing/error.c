@@ -6,13 +6,13 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:58:36 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/07 11:09:56 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:19:32 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	print_error(char *str) //
+void	print_error(char *str)
 {
 	ft_free();
 	printf(RED "%s\n" RESET, str);
@@ -33,13 +33,11 @@ void	ft_check_signe(char **argv)
 			if ((argv[j][i] == '+' || argv[j][i] == '-') && (i == 0 || argv[j][i
 					- 1] == ' '))
 			{
-				// après un + ou - il doit y avoir un chiffre
 				if (!(argv[j][i + 1] >= '0' && argv[j][i + 1] <= '9'))
 					print_error("Invalid sign usage");
 			}
 			else if (argv[j][i] == '+' || argv[j][i] == '-')
 			{
-				// signe mal placé (pas en début de nombre)
 				print_error("Invalid sign placement");
 			}
 			i++;
@@ -48,10 +46,10 @@ void	ft_check_signe(char **argv)
 	}
 }
 
-void	ft_check_num(char **argv) //
+void	ft_check_num(char **argv)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	j = 1;
 	i = 0;
@@ -81,7 +79,7 @@ void	ft_check_value(char **argv)
 		i = 0;
 		count = 0;
 		if (argv[j][i] == '-' || argv[j][i] == '+')
-			i++; // ignorer le signe s'il existe
+			i++;
 		while (argv[j][i])
 		{
 			if (argv[j][i] >= '0' && argv[j][i] <= '9')
@@ -96,7 +94,7 @@ void	ft_check_value(char **argv)
 	}
 }
 
-void	ft_check_error(char **argv) //
+void	ft_check_error(char **argv)
 {
 	ft_check_num(argv);
 	ft_check_value(argv);

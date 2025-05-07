@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 17:02:26 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/22 17:04:30 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:26:30 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	int content;
-	int index;
-	t_stack *new;
+	int		content;
+	int		index;
+	t_stack	*new;
 
 	if (!*stack_b)
 		return ;

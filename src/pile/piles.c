@@ -6,7 +6,7 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:42:24 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/04/22 16:02:22 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 11:21:11 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ void	ft_add_to_front(t_stack **stack, int n)
 		*stack = new;
 		return ;
 	}
-	last = (*stack)->prev; // define laste node
-	new->next = *stack;    // nouvelle->head;
-	new->prev = last;      // last<-nouvelle
-	last->next = new;      // last->nouvelle
-	(*stack)->prev = new;  // nouvelle<-head
+	last = (*stack)->prev;
+	new->next = *stack;
+	new->prev = last;
+	last->next = new;
+	(*stack)->prev = new;
 	*stack = (*stack)->prev;
 }
 
@@ -68,7 +68,6 @@ void	ft_delone_first(t_stack **stack)
 	first = *stack;
 	if (first->next == *stack)
 	{
-		// free(first);
 		*stack = NULL;
 		return ;
 	}

@@ -6,13 +6,12 @@
 /*   By: ramahrez <ramahrez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 15:12:12 by ramahrez          #+#    #+#             */
-/*   Updated: 2025/05/07 11:09:45 by ramahrez         ###   ########.fr       */
+/*   Updated: 2025/05/07 12:23:39 by ramahrez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// Vérifie si un index est dans la plage [start, end] dans la pile
 int	has_index_in_range(t_stack *stack, t_var s_var)
 {
 	t_stack	*current;
@@ -31,7 +30,6 @@ int	has_index_in_range(t_stack *stack, t_var s_var)
 	return (0);
 }
 
-// Trouve le premier index dans la plage [start, end] dans la pile
 int	find_index_in_range(t_stack *stack, t_var s_var)
 {
 	t_stack	*current;
@@ -50,8 +48,6 @@ int	find_index_in_range(t_stack *stack, t_var s_var)
 	return (-1);
 }
 
-// Pousse tous les éléments d’un chunk de A vers B
-// Pousse tous les éléments d’un chunk de A vers B
 void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 {
 	int	target_index;
@@ -62,13 +58,11 @@ void	push_chunk_to_b(t_stack **a, t_stack **b, t_var s_var)
 		if (target_index == -1)
 			break ;
 		move_to_top(a, target_index, s_var, 'a');
-		if (*a) // on s'assure que A n'est pas vide avant de faire pb
+		// move_optimized(a, b, target_index, s_var);
+		if (*a)
 			pb(a, b);
 	}
 }
-
-// Pousse les éléments de B vers A en ordre décroissant
-// Pousse les éléments de B vers A en ordre décroissant
 
 void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 {
@@ -99,7 +93,6 @@ void	sort_with_chunks(t_stack **a, t_stack **b, t_var *s_var)
 	}
 }
 
-// Fonction principale de tri
 void	tri_list(t_stack **stack_a, t_var s_var)
 {
 	t_stack	*stack_b;
